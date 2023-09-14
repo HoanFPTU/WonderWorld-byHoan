@@ -10,6 +10,7 @@ const test = () => {
   return (
     <>
       <PageTemplate background="/bg1.svg">
+        {/* background="/bg1.svg" */}
         <Carousel>Các Hoạt động của triguda</Carousel>
         <div>
           <ActivitiesArea></ActivitiesArea>

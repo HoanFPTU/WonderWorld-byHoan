@@ -9,12 +9,9 @@ import PageTemplate from "@/components/templates/page-template";
 const staff = () => {
   return (
     <>
-      <PageTemplate background="bg1.svg">
-        <Carousel>Dự án bảo tồn biển</Carousel>
-        <div id="staff_page">
-          <Button style="staff">Thành viên</Button>
-          <Inforstaff />
-        </div>
+      <PageTemplate background="/bg1.svg">
+        {/* background="bg1.svg" */}
+        <h1>Oke</h1>
       </PageTemplate>
     </>
   );

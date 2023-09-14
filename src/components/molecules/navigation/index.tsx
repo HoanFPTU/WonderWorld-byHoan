@@ -1,4 +1,3 @@
-"use client";
 import Link from "next/link";
 import React, { FC, useEffect, useState } from "react";
 import "./index.scss";
@@ -52,9 +51,9 @@ const Navigation: FC = ({}) => {
       if (isNavbarExpanded != null && navbarLinksContainer != null) {
         navbarToggle.addEventListener("click", toggleNavbarVisibility);
 
-        navbarLinksContainer.addEventListener("click", (e) =>
-          e.stopPropagation()
-        );
+        // navbarLinksContainer.addEventListener("click", (e) =>
+        //   e.stopPropagation()
+        // );
         navbarMenu.addEventListener("click", toggleNavbarVisibility);
       }
     }

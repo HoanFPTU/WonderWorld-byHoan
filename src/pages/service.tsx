@@ -15,6 +15,7 @@ const service: FC<serviceProps> = ({}) => {
   return (
     <>
       <PageTemplate background="/dVuLan.png">
+        {/* background="/dVuLan.png" */}
         <ScrollSpy scrollThrottle={50} offsetTop={50} offsetBottom={50}>
           <Carousel>{t!["carouselStaffService"]}</Carousel>
           <div id="page2">
