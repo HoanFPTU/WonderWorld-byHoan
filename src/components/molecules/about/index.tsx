@@ -2,8 +2,9 @@ import EventDetail from "@/components/atoms/enentDetail";
 import EventTitle from "@/components/atoms/eventTitle";
 import React, { FC } from "react";
 import "./index.scss";
-import Link from "@/components/atoms/link";
+
 import { useTranslation } from "@/components/hooks/useTranslation";
+import Link from "next/link";
 interface indexProps {}
 
 const About: FC<indexProps> = ({}) => {

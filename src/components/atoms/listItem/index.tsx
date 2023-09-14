@@ -1,6 +1,7 @@
 import React, { FC } from "react";
 import "./index.scss";
-import Link from "../link";
+import Link from "next/link";
+
 interface indexProps {
   title: string;
   text1: string;

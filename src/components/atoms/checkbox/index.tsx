@@ -8,7 +8,7 @@ interface checkboxProps {
 const Checkbox: FC<checkboxProps> = ({ href }) => {
   return (
     <div className={`checkbox`} data-to-scrollspy-id={`${href}`}>
-      <a className="a" href={`#${href}`}></a>
+      <Link className="a" href={`#${href}`}></Link>
     </div>
   );
 };

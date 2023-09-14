@@ -1,4 +1,3 @@
-import Link from "next/link";
 import React, { FC } from "react";
 import "./index.scss";
 import Button from "@/components/atoms/button";

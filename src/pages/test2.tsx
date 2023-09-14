@@ -9,15 +9,13 @@ const test2 = () => {
     <div className="home">
       <div className="bg"></div>
 
-      <ScrollSpy scrollThrottle={50} offsetTop={50} offsetBottom={50}>
-        <Carousel>NHÂN VIÊN TRINGUDA</Carousel>
-        <div className="block">
-          <Button href="./" style="staff">
-            Thành viên
-          </Button>
-          <Inforstaff></Inforstaff>
-        </div>
-      </ScrollSpy>
+      <Carousel>NHÂN VIÊN TRINGUDA</Carousel>
+      <div className="block">
+        <Button href="./" style="staff">
+          Thành viên
+        </Button>
+        <Inforstaff></Inforstaff>
+      </div>
     </div>
   );
 };

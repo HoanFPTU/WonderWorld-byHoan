@@ -12,19 +12,24 @@ interface CarouselBotProps {
 
 const CarouselBot: FC<CarouselBotProps> = ({ sliderRef }) => {
   const { page, setPage } = useContext(PageContext);
-  console.log(page);
+
   const handlePrev = () => {
     setTimeout(() => {
-      setPage(page > 1 ? page - 1 : 4);
-      sliderRef.current.slickPrev();
+      if (page !== null) {
+        console.log("prev", page);
+        setPage(page > 1 ? page - 1 : 4);
+        sliderRef.current.slickPrev();
+      }
     }, 500);
   };
-  console.log(sliderRef.current);
+
   const handleNext = () => {
+    console.log("next", page);
     setTimeout(() => {
-      setPage(page < 4 ? page + 1 : 1);
-      sliderRef.current.slickNext();
-      sliderRef.current.slickGoTo(page);
+      if (page !== null) {
+        setPage(page < 4 ? page + 1 : 1);
+        sliderRef.current.slickNext();
+      }
     }, 500);
   };
   const t = useTranslation();

@@ -1,4 +1,5 @@
-import Link from "@/components/atoms/link";
+"use client";
+import Link from "next/link";
 import React, { FC, useEffect, useState } from "react";
 import "./index.scss";
 import { useTranslation } from "../../hooks/useTranslation";

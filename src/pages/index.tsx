@@ -12,9 +12,7 @@ const Home: FC = () => {
     <PageTemplate background="/bg1.jpeg">
       <Groupcheckbox idList={["1", "2"]}></Groupcheckbox>
       <ScrollSpy scrollThrottle={50} offsetTop={50} offsetBottom={50}>
-        <Carousel page={1} id="1">
-          Dự án bảo tồn biển
-        </Carousel>
+        <Carousel>Dự án bảo tồn biển</Carousel>
         {/* <div className="block" id="page2"></div>
           <div className="block" id="page3"></div> */}
         <div id="2">

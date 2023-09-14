@@ -3,7 +3,7 @@ import "./index.scss";
 import EventTitle from "@/components/atoms/eventTitle";
 import EventDetail from "@/components/atoms/enentDetail";
 import OrderCard from "@/components/atoms/orderCard";
-import Link from "@/components/atoms/link";
+import Link from "next/link";
 import { useTranslation } from "@/components/hooks/useTranslation";
 interface indexProps {}
 

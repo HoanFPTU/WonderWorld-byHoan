@@ -11,15 +11,13 @@ const staff = () => {
   const t = useTranslation();
   return (
     <PageTemplate background="/bg2-2.svg">
-      <ScrollSpy scrollThrottle={50} offsetTop={50} offsetBottom={50}>
-        <Carousel>{t!["carouselStaffPage"]}</Carousel>
-        <div id="page2" className="block">
-          <Button href="./" style="staff">
-            {t!["staffPageTitle"]}
-          </Button>
-          <Inforstaff></Inforstaff>
-        </div>
-      </ScrollSpy>
+      <Carousel>{t!["carouselStaffPage"]}</Carousel>
+      <div id="page2" className="block">
+        <Button href="./" style="staff">
+          {t!["staffPageTitle"]}
+        </Button>
+        <Inforstaff></Inforstaff>
+      </div>
     </PageTemplate>
   );
 };

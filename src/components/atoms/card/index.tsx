@@ -12,7 +12,7 @@ const Card: FC<CardProps> = ({ children, src }) => {
     <div className="divcard">
       <div className={`card `}>
         <img src={src} />
-        <Link href="./" className="card__text">
+        <Link href="/media" className="card__text">
           {children}
         </Link>
       </div>

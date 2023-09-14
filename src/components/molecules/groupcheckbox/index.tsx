@@ -1,4 +1,4 @@
-import Link from "@/components/atoms/link";
+import Link from "next/link";
 import React, { FC } from "react";
 import "./index.scss";
 import Checkbox from "@/components/atoms/checkbox";

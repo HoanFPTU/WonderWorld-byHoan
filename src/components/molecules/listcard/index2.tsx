@@ -7,8 +7,6 @@ import "slick-carousel/slick/slick-theme.css";
 import Card from "@/components/atoms/card";
 import { useTranslation } from "@/components/hooks/useTranslation";
 interface ListcardProps {
-  // next: () => void;
-  // pre: () => void;
   sliderRef: any;
 }
 
@@ -42,10 +40,22 @@ const Listcard: FC<ListcardProps> = ({ sliderRef }) => {
     return (
       <div className="widthSlider">
         <Slider ref={sliderRef} {...settings}>
-          <Card src="/bg2.svg"> {t!["carouselCardStaff"]}</Card>
-          <Card src="/bg3.svg"> {t!["carouselCardActivities"]}</Card>
-          <Card src="/bg4.svg"> {t!["carouselCardProject"]}</Card>
-          <Card src="/bg1.svg"> {t!["carouselCardService"]}</Card>
+          <Card src="/Card/carouselCardStaff.svg">
+            {" "}
+            {t!["carouselCardStaff"]}
+          </Card>
+          <Card src="/Card/carouselCardActivities.svg">
+            {" "}
+            {t!["carouselCardActivities"]}
+          </Card>
+          <Card src="/Card/carouselCardProject.svg">
+            {" "}
+            {t!["carouselCardProject"]}
+          </Card>
+          <Card src="/Card/carouselCardService.svg">
+            {" "}
+            {t!["carouselCardService"]}
+          </Card>
         </Slider>
       </div>
     );
