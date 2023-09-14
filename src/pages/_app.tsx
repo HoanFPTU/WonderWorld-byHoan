@@ -9,8 +9,6 @@ import Footer from "@/components/organisms/footer";
 import { motion, AnimatePresence } from "framer-motion";
 import { useRouter } from "next/router";
 // import { MyContextGlobal } from "@/components/useContext/useContextGlobal";
-const router = useRouter();
-const { pathname, asPath, query } = router;
 
 const MyApp: FC<AppProps> = ({ Component, pageProps }) => {
   useEffect(() => {
@@ -20,106 +18,8 @@ const MyApp: FC<AppProps> = ({ Component, pageProps }) => {
       offset: 50,
     });
   }, []);
+
   const router = useRouter();
-  useEffect(() => {
-    let currentLanguage = document.getElementById(
-      "language-options-container-current"
-    );
-    let listOptions = document.getElementById("language-options-area-id");
-    if (currentLanguage != null) {
-      let isLanguageOptionsOpen =
-        currentLanguage.getAttribute("aria-expanded") === "true";
-      const toggleLanguageOptions = () => {
-        isLanguageOptionsOpen = !isLanguageOptionsOpen;
-        currentLanguage?.setAttribute(
-          "aria-expanded",
-          isLanguageOptionsOpen.toString()
-        );
-        listOptions?.setAttribute(
-          "aria-expanded",
-          (!isLanguageOptionsOpen).toString()
-        );
-      };
-      currentLanguage.addEventListener("click", toggleLanguageOptions);
-      listOptions?.addEventListener("click", toggleLanguageOptions);
-    }
-
-    let currentLanguage2 = document.getElementById(
-      "language-options-container-current-2"
-    );
-    let listOptions2 = document.getElementById("language-options-area-id-2");
-    if (currentLanguage2 != null) {
-      let isLanguageOptionsOpen2 =
-        currentLanguage2.getAttribute("aria-expanded") === "true";
-      const toggleLanguageOptions2 = () => {
-        isLanguageOptionsOpen2 = !isLanguageOptionsOpen2;
-        currentLanguage2?.setAttribute(
-          "aria-expanded",
-          isLanguageOptionsOpen2.toString()
-        );
-        listOptions2?.setAttribute(
-          "aria-expanded",
-          (!isLanguageOptionsOpen2).toString()
-        );
-      };
-      currentLanguage2.addEventListener("click", toggleLanguageOptions2);
-      listOptions2?.addEventListener("click", toggleLanguageOptions2);
-    }
-  }, []);
-  useEffect(() => {
-    document.addEventListener("scroll", () => {
-      let header = document.getElementById("the-header");
-      if (window.scrollY > 50 && !(header == null)) {
-        header.classList.add("header-scrolled");
-      } else if (header != null) {
-        header.classList.remove("header-scrolled");
-      }
-    });
-
-    const navbarToggle = document.querySelector("#navbar-toggle");
-    const navbarMenu = document.querySelector("#navbar-menu");
-    if (navbarMenu != null && navbarToggle != null) {
-      const navbarLinksContainer = navbarMenu.querySelector(".navbar-links");
-      let isNavbarExpanded =
-        navbarToggle.getAttribute("aria-expanded") === "true";
-      const toggleNavbarVisibility = () => {
-        isNavbarExpanded = !isNavbarExpanded;
-        navbarToggle.setAttribute("aria-expanded", isNavbarExpanded.toString());
-      };
-      if (isNavbarExpanded != null && navbarLinksContainer != null) {
-        navbarToggle.addEventListener("click", toggleNavbarVisibility);
-
-        navbarLinksContainer.addEventListener("click", (e) => {
-          e.preventDefault();
-          e.stopPropagation();
-        });
-        navbarMenu.addEventListener("click", toggleNavbarVisibility);
-      }
-    }
-
-    const handleChangedLanguage = (newLocale: string) => {
-      router.push({ pathname, query }, asPath, {
-        locale: newLocale,
-        scroll: false,
-      });
-    };
-    let listChangedOptions = document.getElementsByClassName(
-      "language-options-change"
-    );
-    for (let i = 0; i <= listChangedOptions.length; i++) {
-      if (listChangedOptions[i] != null) {
-        listChangedOptions[i].addEventListener("click", (e) => {
-          e.preventDefault();
-          let locale = listChangedOptions[i]
-            .getAttribute("aria-label")
-            ?.toString();
-          if (locale != undefined) {
-            handleChangedLanguage(locale);
-          }
-        });
-      }
-    }
-  }, []);
   return (
     <>
       <AnimatePresence>

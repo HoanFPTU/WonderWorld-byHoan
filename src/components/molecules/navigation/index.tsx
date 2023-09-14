@@ -51,9 +51,9 @@ const Navigation: FC = ({}) => {
       if (isNavbarExpanded != null && navbarLinksContainer != null) {
         navbarToggle.addEventListener("click", toggleNavbarVisibility);
 
-        // navbarLinksContainer.addEventListener("click", (e) =>
-        //   e.stopPropagation()
-        // );
+        navbarLinksContainer.addEventListener("click", (e) =>
+          e.stopPropagation()
+        );
         navbarMenu.addEventListener("click", toggleNavbarVisibility);
       }
     }
@@ -144,7 +144,7 @@ const Navigation: FC = ({}) => {
       <div id="navbar-menu" aria-labelledby="navbar-toggle">
         <ul className="navbar-links">
           <li className="navbar-item">
-            <Link href="/staff">{t!["headerAbout"]}</Link>
+            <Link href="staff">{t!["headerAbout"]}</Link>
           </li>
           <li className="navbar-item language-options-container">
             <div id="language-options-container-current" aria-expanded="false">
@@ -186,10 +186,10 @@ const Navigation: FC = ({}) => {
             </div>
           </li>
           <li className="navbar-item">
-            <Link href="/media">{t!["headerVideo"]}</Link>
+            <Link href="media">{t!["headerVideo"]}</Link>
           </li>
           <li className="navbar-item">
-            <Link href="/service">{t!["headerContact"]}</Link>
+            <Link href="service">{t!["headerContact"]}</Link>
           </li>
           <li className="navbar-item language-options-container language-options-responsive">
             <div
