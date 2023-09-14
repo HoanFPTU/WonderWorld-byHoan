@@ -1,5 +1,5 @@
 import { AppProps } from "next/app";
-import React, { FC, useEffect } from "react";
+import React, { FC, useEffect, useState } from "react";
 import "../styles/globals.scss";
 import Head from "next/head";
 import Header from "@/components/organisms/header";
@@ -8,6 +8,7 @@ import "aos/dist/aos.css";
 import Footer from "@/components/organisms/footer";
 import { motion, AnimatePresence } from "framer-motion";
 import { useRouter } from "next/router";
+import { platform } from "os";
 // import { MyContextGlobal } from "@/components/useContext/useContextGlobal";
 
 const MyApp: FC<AppProps> = ({ Component, pageProps }) => {
@@ -20,31 +21,18 @@ const MyApp: FC<AppProps> = ({ Component, pageProps }) => {
   }, []);
 
   const router = useRouter();
+
   return (
     <>
-      <AnimatePresence>
+      <AnimatePresence initial={false} mode="popLayout">
         <motion.div
-          key={router.route}
-          initial={{ opacity: 0.1 }}
-          animate={{ opacity: 1 }}
-          exit={{ opacity: 0 }}
+          key={router.pathname}
+          initial={{ x: 1000, opacity: 0 }}
+          animate={{ x: 0, opacity: 1 }}
+          exit={{ x: -1000, opacity: 0 }}
           transition={{
-            duration: 1,
+            opacity: { ease: "linear" },
           }}
-          // variants={{
-          //   initialState: {
-          //     opacity: 1,
-          //     clipPath: "polygon(0 0 , 100% 0,100% 100%, 0% 100%)",
-          //   },
-          //   animateState: {
-          //     opacity: 1,
-          //     clipPath: "polygon(0 0 , 100% 0, 100% 100%,0 100%)",
-          //   },
-          //   exitState: {
-          //     opacity: 1,
-          //     clipPath: "polygon(100% 0, 100% 0, 100% 100%, 100% 100%)",
-          //   },
-          // }}
         >
           <Head>
             <title>Wonder World</title>

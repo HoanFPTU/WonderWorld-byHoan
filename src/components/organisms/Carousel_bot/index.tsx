@@ -20,7 +20,7 @@ const CarouselBot: FC<CarouselBotProps> = ({ sliderRef }) => {
         setPage(page > 1 ? page - 1 : 4);
         sliderRef.current.slickPrev();
       }
-    }, 500);
+    }, 400);
   };
 
   const handleNext = () => {
@@ -30,7 +30,7 @@ const CarouselBot: FC<CarouselBotProps> = ({ sliderRef }) => {
         setPage(page < 4 ? page + 1 : 1);
         sliderRef.current.slickNext();
       }
-    }, 500);
+    }, 400);
   };
   const t = useTranslation();
   return (

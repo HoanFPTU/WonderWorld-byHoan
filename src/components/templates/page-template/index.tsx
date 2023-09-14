@@ -8,9 +8,13 @@ interface PageTemplateProps {
 }
 
 const PageTemplate: FC<PageTemplateProps> = ({ children, background }) => {
-  console.log("123");
   return (
-    <div className="page" style={{ backgroundImage: `url('${background}')` }}>
+    <div
+      className="page"
+      style={{
+        backgroundImage: `url('${background}')`,
+      }}
+    >
       <Header />
       {children}
       <Footer />

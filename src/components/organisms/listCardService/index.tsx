@@ -17,7 +17,7 @@ const ListCardService: FC<indexProps> = ({}) => {
       </div>
       <div
         className="wrap-listcard"
-        data-aos="flip-left"
+        // data-aos="flip-left"
         data-aos-easing="ease-out-cubic"
         data-aos-duration="1300"
       >
