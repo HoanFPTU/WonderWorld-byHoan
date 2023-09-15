@@ -33,17 +33,15 @@ const ServiceCard: FC<indexProps> = ({
 }) => {
   const [isFavorite, setIsFavorite] = useState(imgFav === "red");
   const heartImgSrc = isFavorite ? "/heart.svg" : "/whiteheart.svg";
-
+  const arrayCt = [ct1, ct2, ct3, ct4, ct5, ct6, ct7];
   const handleHeartClick = () => {
     setIsFavorite(!isFavorite);
   };
   const t = useTranslation();
   return (
     <div className="card-sevice">
-      <div>
-        <div className="bigImg">
-          <img src={imgHref} className="card-img-top" alt="..." />
-        </div>
+      <React.Fragment>
+        <img src={imgHref} className="card-img-top" alt="..." />
         <div className="favorite">
           <div className="Ellipse">
             <img src="/Ellipse.svg" alt="" />
@@ -55,16 +53,20 @@ const ServiceCard: FC<indexProps> = ({
         <div className={`card-body `}>
           <h5 className="card-title">{title}</h5>
           <ul className="card-text">
-            <li>{ct1}</li>
+            {arrayCt.map((item) => {
+              return <li key={item}>{item}</li>;
+            })}
+
+            {/* <li>{ct1}</li>
             <li>{ct2}</li>
             <li>{ct3}</li>
             <li>{ct4}</li>
             <li>{ct5}</li>
             <li>{ct6}</li>
-            <li>{ct7}</li>
+            <li>{ct7}</li> */}
           </ul>
         </div>
-      </div>
+      </React.Fragment>
 
       <div className="card-foot">
         <div className="time">
