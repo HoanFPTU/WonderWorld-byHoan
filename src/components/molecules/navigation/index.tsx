@@ -50,7 +50,9 @@ const Navigation: FC = ({}) => {
       locale: locale,
       scroll: false,
     });
-    setIsMobileMenuOpen(!isMobileMenuOpen);
+    if (isMobileMenuOpen) {
+      setIsMobileMenuOpen(!isMobileMenuOpen);
+    }
   };
 
   return (
