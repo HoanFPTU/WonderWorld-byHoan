@@ -11,35 +11,47 @@ interface CarouselBotProps {
 }
 
 const CarouselBot: FC<CarouselBotProps> = ({ sliderRef }) => {
-  const { page, setPage } = useContext(PageContext);
-
+  const { numberPage, setNumberPage } = useContext(PageContext);
+  const arrhref = ["/", "staff", "active", "service", "/"];
   const handlePrev = () => {
     setTimeout(() => {
-      if (page !== null) {
-        console.log("prev", page);
-        setPage(page > 1 ? page - 1 : 4);
+      if (numberPage !== null) {
+        console.log("prev", numberPage);
+        setNumberPage(numberPage > 1 ? numberPage - 1 : 4);
         sliderRef.current.slickPrev();
       }
-    }, 400);
+    }, 500);
   };
 
   const handleNext = () => {
-    console.log("next", page);
     setTimeout(() => {
-      if (page !== null) {
-        setPage(page < 4 ? page + 1 : 1);
+      if (numberPage !== null) {
+        setNumberPage(numberPage < 4 ? numberPage + 1 : 1);
         sliderRef.current.slickNext();
       }
-    }, 400);
+    }, 500);
   };
   const t = useTranslation();
+
   return (
     <div className="Carousel_bot">
       <div className="Carousel_bot__top">
-        <Button style="circle" func={() => handlePrev()}>
+        <Button
+          href={
+            numberPage !== null && numberPage > 1
+              ? arrhref[numberPage - 2]
+              : "service"
+          }
+          style="circle"
+          func={() => handlePrev()}
+        >
           <img src="/preslide.svg" alt="" />
         </Button>
-        <Button style="circle" func={() => handleNext()}>
+        <Button
+          href={numberPage ? arrhref[numberPage] : "/"}
+          style="circle"
+          func={() => handleNext()}
+        >
           <img src="/nextslide.svg" alt="" />
         </Button>
         <Progress></Progress>

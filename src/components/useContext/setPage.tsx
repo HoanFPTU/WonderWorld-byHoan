@@ -1,23 +1,27 @@
 import React, { FC, useContext, useRef, useState } from "react";
 interface TypePage {
-  page2: number | null;
-  page: number | null;
-  setPage: (message: number) => void;
+  numberPage: number | null;
+  setNumberPage: (message: number) => void;
+  numberAnimation: number | null;
+  setNumberAnimation: (message: number) => void;
 }
 interface MyPageContextProps {
   children: React.ReactNode;
 }
 export const PageContext = React.createContext<TypePage>({
-  page2: null,
-  page: null,
-  setPage: () => {},
+  numberAnimation: null,
+  numberPage: null,
+  setNumberPage: () => {},
+  setNumberAnimation: () => {},
 });
 
 export const MyPageContext: FC<MyPageContextProps> = ({ children }) => {
-  const [page, setPage] = useState(1);
-  const page2 = 1;
+  const [numberPage, setNumberPage] = useState<number | null>(1);
+  const [numberAnimation, setNumberAnimation] = useState<number | null>(100);
   return (
-    <PageContext.Provider value={{ page, setPage, page2 }}>
+    <PageContext.Provider
+      value={{ numberPage, setNumberPage, numberAnimation, setNumberAnimation }}
+    >
       {children}
     </PageContext.Provider>
   );

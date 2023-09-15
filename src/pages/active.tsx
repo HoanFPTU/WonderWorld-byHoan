@@ -1,17 +1,25 @@
 import { AppProps } from "next/app";
-import React, { Component, FC } from "react";
+import React, { FC, useEffect } from "react";
 import "../styles/globals.scss";
-import Groupcheckbox from "@/components/molecules/groupcheckbox";
+
 import Carousel from "@/components/organisms/Carousel";
-import ScrollSpy from "react-ui-scrollspy";
+
 import PageTemplate from "@/components/templates/page-template";
 import ActivitiesArea from "@/components/organisms/activitesArea";
-const test = () => {
+import { useTranslation } from "@/components/hooks/useTranslation";
+import { PageContext } from "@/components/useContext/setPage";
+const ActivePage: FC = ({}) => {
+  const t = useTranslation();
+  const { numberPage, setNumberPage } = React.useContext(PageContext);
+  useEffect(() => {
+    setNumberPage(3);
+  }, []);
+
   return (
     <>
-      <PageTemplate background="/bg1.svg">
+      <PageTemplate background="/backgroundTemplate/active.svg">
         {/* background="/bg1.svg" */}
-        <Carousel>Các Hoạt động của triguda</Carousel>
+        <Carousel> {t!["carouselCardActivities"]}</Carousel>
         <div>
           <ActivitiesArea></ActivitiesArea>
         </div>
@@ -19,4 +27,4 @@ const test = () => {
     </>
   );
 };
-export default test;
+export default ActivePage;

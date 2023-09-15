@@ -15,16 +15,11 @@ const Project: FC = () => {
   return (
     <>
       <PageTemplate background="/bg1.jpeg">
-        <Groupcheckbox></Groupcheckbox>
-        <ScrollSpy scrollThrottle={50} offsetTop={50} offsetBottom={50}>
-          <Carousel>Dự Án Bảo Tồn Bãi Biển</Carousel>
-          <div id="page2">
-            <div className="cover-project">
-              <ServiceLeft />
-              <ServiceRight />
-            </div>
-          </div>
-        </ScrollSpy>
+        <Carousel>Dự Án Bảo Tồn Bãi Biển</Carousel>
+        <div className="cover-project">
+          <ServiceLeft />
+          <ServiceRight />
+        </div>
       </PageTemplate>
     </>
   );

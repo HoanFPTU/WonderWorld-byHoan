@@ -8,9 +8,14 @@ import ServiceRight from "@/components/organisms/Service-right";
 import ListCardService from "@/components/organisms/listCardService";
 import PageTemplate from "@/components/templates/page-template";
 import { useTranslation } from "@/components/hooks/useTranslation";
+import { PageContext } from "@/components/useContext/setPage";
 interface serviceProps {}
 
 const service: FC<serviceProps> = ({}) => {
+  const { numberPage, setNumberPage } = React.useContext(PageContext);
+  React.useEffect(() => {
+    setNumberPage(4);
+  }, []);
   const t = useTranslation();
   return (
     <>

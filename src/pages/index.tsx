@@ -1,24 +1,31 @@
-import { FC, useState } from "react";
+import { AppProps } from "next/app";
+import React, { Component, FC } from "react";
+import "../styles/globals.scss";
 import "../styles/index.scss";
-import ServiceCard from "@/components/atoms/serviceCard";
-import ListCardService from "@/components/organisms/listCardService";
-import Groupcheckbox from "@/components/molecules/groupcheckbox";
-import ScrollSpy from "react-ui-scrollspy";
+import "../styles/project.scss";
 import Carousel from "@/components/organisms/Carousel";
+import ServiceLeft from "@/components/organisms/Service-left";
+import ServiceRight from "@/components/organisms/Service-right";
 import PageTemplate from "@/components/templates/page-template";
-
-const Home: FC = () => {
+import { useTranslation } from "@/components/hooks/useTranslation";
+import { PageContext } from "@/components/useContext/setPage";
+const Project: FC = () => {
+  const t = useTranslation();
+  const { numberPage, setNumberPage } = React.useContext(PageContext);
+  React.useEffect(() => {
+    setNumberPage(1);
+  }, []);
   return (
-    <PageTemplate background="/bg1.jpeg">
-      {/* background="/bg1.jpeg" */}
-      <Carousel>Dự án bảo tồn biển</Carousel>
-      {/* <div className="block" id="page2"></div>
-          <div className="block" id="page3"></div> */}
-      <div id="2">
-        <ListCardService />
-      </div>
-    </PageTemplate>
+    <>
+      <PageTemplate background="/bg1.jpeg">
+        <Carousel>{t!["carouselStaffProject"]}</Carousel>
+        <div className="cover-project">
+          <ServiceLeft />
+          <ServiceRight />
+        </div>
+      </PageTemplate>
+    </>
   );
 };
 
-export default Home;
+export default Project;

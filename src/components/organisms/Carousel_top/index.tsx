@@ -3,8 +3,8 @@ import "./index.scss";
 import TitleCarousel from "@/components/molecules/TitleCarousel";
 
 import Groupcheckbox from "@/components/molecules/groupcheckbox";
-import SimpleSlider from "@/components/molecules/listcard/index2";
-import Listcard from "@/components/molecules/listcard/index2";
+import SimpleSlider from "@/components/molecules/listcard";
+import Listcard from "@/components/molecules/listcard";
 interface CarouselTopProps {
   children: React.ReactNode;
   sliderRef: any;

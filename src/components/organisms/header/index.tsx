@@ -1,7 +1,7 @@
 import Button from "@/components/atoms/button";
 import Logo from "@/components/atoms/logo";
 import Navigation from "@/components/molecules/navigation";
-import React, { FC, useEffect } from "react";
+import React, { FC } from "react";
 import "./index.scss";
 import { stringify } from "querystring";
 interface HeaderProps {}

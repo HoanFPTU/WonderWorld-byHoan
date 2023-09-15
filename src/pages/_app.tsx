@@ -9,41 +9,43 @@ import Footer from "@/components/organisms/footer";
 import { motion, AnimatePresence } from "framer-motion";
 import { useRouter } from "next/router";
 import { platform } from "os";
+import { MyPageContext } from "@/components/useContext/setPage";
 // import { MyContextGlobal } from "@/components/useContext/useContextGlobal";
 
 const MyApp: FC<AppProps> = ({ Component, pageProps }) => {
+  const router = useRouter();
   useEffect(() => {
+    console.log("oke");
     AOS.init({
       easing: "ease-out-cubic",
       once: true,
       offset: 50,
     });
-  }, []);
-
-  const router = useRouter();
-
+  }, [router.pathname]);
   return (
     <>
-      <AnimatePresence initial={false} mode="popLayout">
-        <motion.div
+      <AnimatePresence initial={false} mode="wait">
+        {/* <motion.div
           key={router.pathname}
-          initial={{ x: 1000, opacity: 0 }}
-          animate={{ x: 0, opacity: 1 }}
-          exit={{ x: -1000, opacity: 0 }}
+          initial={{ x: "-100%" }}
+          animate={{ x: 0 }}
+          exit={{ x: "100%" }}
           transition={{
-            opacity: { ease: "linear" },
+            duration: 0.6,
+            ease: "easeInOut",
           }}
-        >
-          <Head>
-            <title>Wonder World</title>
-            <link
-              rel="icon"
-              href="https://th.bing.com/th/id/R.13b5007b669aa231303f9c2083c4e7dd?rik=POS76FSob%2fEFpg&pid=ImgRaw&r=0"
-            />
-          </Head>
-
+        > */}
+        <Head>
+          <title>Wonder World</title>
+          <link
+            rel="icon"
+            href="https://th.bing.com/th/id/R.13b5007b669aa231303f9c2083c4e7dd?rik=POS76FSob%2fEFpg&pid=ImgRaw&r=0"
+          />
+        </Head>
+        <MyPageContext>
           <Component {...pageProps} />
-        </motion.div>
+        </MyPageContext>
+        {/* </motion.div> */}
       </AnimatePresence>
     </>
   );

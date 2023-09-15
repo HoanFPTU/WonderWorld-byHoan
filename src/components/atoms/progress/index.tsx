@@ -3,17 +3,17 @@ import "./index.scss";
 import { PageContext } from "@/components/useContext/setPage";
 
 const Progress: FC = ({}) => {
-  const { page, setPage } = useContext(PageContext);
+  const { numberPage, setNumberPage } = useContext(PageContext);
 
   return (
     <div className="progress">
       <div className="progress__border">
         <div
           className="progress_per"
-          style={{ width: `${page ? page / 0.04 : 1}%` }}
+          style={{ width: `${numberPage ? numberPage / 0.04 : 1}%` }}
         ></div>
       </div>
-      <span>0{page ? page : 4}</span>
+      <span>0{numberPage ? numberPage : 4}</span>
     </div>
   );
 };

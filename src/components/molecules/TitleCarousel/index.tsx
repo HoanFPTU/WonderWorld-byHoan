@@ -1,4 +1,3 @@
-import Link from "@/components/atoms/link";
 import React, { FC } from "react";
 import "./index.scss";
 import Checkbox from "@/components/atoms/checkbox";
@@ -13,7 +12,7 @@ const TitleCarousel: FC<TitleCarouselProps> = ({ children }) => {
   return (
     <div className="title_carousel">
       <h1>{children}</h1>
-      <Button href="./" style="black">
+      <Button href="#" style="black">
         {t!["carouselButtonMore"]}
       </Button>
     </div>
