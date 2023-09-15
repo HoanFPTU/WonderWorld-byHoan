@@ -8,6 +8,8 @@ const Navigation: FC = ({}) => {
   const router = useRouter();
   const { pathname, asPath, query } = router;
   const t = useTranslation();
+  const [isLanguageMenuOpen, setIsLanguageMenuOpen] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [currentLanguage, setCurrentLanguage] = useState(
     `${t!["headerLanguage"]}`
   );
@@ -126,9 +128,21 @@ const Navigation: FC = ({}) => {
       }
     }
   }, []);
+
   useEffect(() => {
     setCurrentLanguage(`${t!["headerLanguage"]}`);
   }, [t!["headerLanguage"]]);
+
+  const handleChangedLanguage = (locale: string) => {
+    router.push({ pathname, query }, asPath, {
+      locale: locale,
+      scroll: false,
+    });
+    if (isMobileMenuOpen) {
+      setIsMobileMenuOpen(!isMobileMenuOpen);
+    }
+  };
+
   return (
     <nav className="navigation navbar-container container">
       <button
@@ -136,26 +150,44 @@ const Navigation: FC = ({}) => {
         id="navbar-toggle"
         aria-controls="navbar-menu"
         aria-label="Toggle menu"
-        aria-expanded="false"
+        aria-expanded={isMobileMenuOpen}
+        onClick={() => {
+          if (!isLanguageMenuOpen) {
+            setIsMobileMenuOpen(!isMobileMenuOpen);
+          }
+        }}
       >
         <span className="icon-bar" />
         <span className="icon-bar" />
         <span className="icon-bar" />
       </button>
-      <div id="navbar-menu" aria-labelledby="navbar-toggle">
+      <div
+        id="navbar-menu"
+        aria-labelledby="navbar-toggle"
+        aria-expanded={isMobileMenuOpen}
+      >
         <ul className="navbar-links">
           <li className="navbar-item">
-            <Link href="staff">{t!["headerAbout"]}</Link>
+            <Link href="/staff">{t!["headerAbout"]}</Link>
           </li>
           <li className="navbar-item language-options-container">
-            <div id="language-options-container-current" aria-expanded="false">
+            <div
+              id="language-options-container-current"
+              aria-expanded={isLanguageMenuOpen}
+              onClick={() => {
+                setIsLanguageMenuOpen(!isLanguageMenuOpen);
+              }}
+            >
               {currentLanguage}
               <img className="v-icon" src="/v-icon.svg" />
             </div>
             <div
               className="language-options-area"
               id="language-options-area-id"
-              aria-expanded="true"
+              aria-expanded={!isLanguageMenuOpen}
+              onClick={() => {
+                setIsLanguageMenuOpen(!isLanguageMenuOpen);
+              }}
             >
               <div>
                 {currentLanguage}
@@ -164,19 +196,16 @@ const Navigation: FC = ({}) => {
               <div className="language-options">
                 <div>
                   {languageList
-                    .filter(
-                      (item) =>
-                        !(
-                          // item.id == `${t!["headerLanguageId"]}` ||
-                          (item.language == `${currentLanguage}`)
-                        )
-                    )
+                    .filter((item) => !(item.language == `${currentLanguage}`))
                     .map(({ id, language, locale }, index) => {
                       return (
                         <div
                           key={index}
                           className="language-options-change"
                           aria-label={locale}
+                          onClick={() => {
+                            handleChangedLanguage(locale);
+                          }}
                         >
                           {language}
                         </div>
@@ -187,15 +216,18 @@ const Navigation: FC = ({}) => {
             </div>
           </li>
           <li className="navbar-item">
-            <Link href="media">{t!["headerVideo"]}</Link>
+            <Link href="/media">{t!["headerVideo"]}</Link>
           </li>
           <li className="navbar-item">
-            <Link href="service">{t!["headerContact"]}</Link>
+            <Link href="/service">{t!["headerContact"]}</Link>
           </li>
           <li className="navbar-item language-options-container language-options-responsive">
             <div
               id="language-options-container-current-2"
-              aria-expanded="false"
+              aria-expanded={isLanguageMenuOpen}
+              onClick={() => {
+                setIsLanguageMenuOpen(!isLanguageMenuOpen);
+              }}
             >
               {currentLanguage}
               <img className="v-icon" src="/v-icon.svg" />
@@ -203,7 +235,10 @@ const Navigation: FC = ({}) => {
             <div
               className="language-options-area"
               id="language-options-area-id-2"
-              aria-expanded="true"
+              aria-expanded={!isLanguageMenuOpen}
+              onClick={() => {
+                setIsLanguageMenuOpen(!isLanguageMenuOpen);
+              }}
             >
               <div>
                 {currentLanguage}
@@ -212,19 +247,16 @@ const Navigation: FC = ({}) => {
               <div className="language-options">
                 <div>
                   {languageList
-                    .filter(
-                      (item) =>
-                        !(
-                          // item.id == `${t!["headerLanguageId"]}` ||
-                          (item.language == `${currentLanguage}`)
-                        )
-                    )
+                    .filter((item) => !(item.language == `${currentLanguage}`))
                     .map(({ id, language, locale }, index) => {
                       return (
                         <div
                           key={index}
                           className="language-options-change"
                           aria-label={locale}
+                          onClick={() => {
+                            handleChangedLanguage(locale);
+                          }}
                         >
                           {language}
                         </div>
