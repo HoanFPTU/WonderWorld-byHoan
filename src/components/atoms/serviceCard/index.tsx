@@ -1,3 +1,4 @@
+"use client";
 import React, { FC, useEffect, useState } from "react";
 import "./index.scss";
 import Message from "../message";
@@ -38,33 +39,36 @@ const ServiceCard: FC<indexProps> = ({
   };
   const t = useTranslation();
   return (
-    <div className="card-sevice" style={{ width: "17rem" }}>
-      <div className="bigImg">
-        <img src={imgHref} className="card-img-top" alt="..." />
-      </div>
-      <div className="favorite">
-        <div className="Ellipse">
-          <img src="/Ellipse.svg" alt="" />
+    <div className="card-sevice">
+      <div>
+        <div className="bigImg">
+          <img src={imgHref} className="card-img-top" alt="..." />
         </div>
-        <div className="heart">
-          <img src={heartImgSrc} alt="" onClick={handleHeartClick} />
+        <div className="favorite">
+          <div className="Ellipse">
+            <img src="/Ellipse.svg" alt="" />
+          </div>
+          <div className="heart">
+            <img src={heartImgSrc} alt="" onClick={handleHeartClick} />
+          </div>
+        </div>
+        <div className={`card-body `}>
+          <h5 className="card-title">{title}</h5>
+          <ul className="card-text">
+            <li>{ct1}</li>
+            <li>{ct2}</li>
+            <li>{ct3}</li>
+            <li>{ct4}</li>
+            <li>{ct5}</li>
+            <li>{ct6}</li>
+            <li>{ct7}</li>
+          </ul>
         </div>
       </div>
-      <div className={`card-body ${style}`}>
-        <h5 className="card-title">{title}</h5>
-        <ul className="card-text">
-          <li>{ct1}</li>
-          <li>{ct2}</li>
-          <li>{ct3}</li>
-          <li>{ct4}</li>
-          <li>{ct5}</li>
-          <li>{ct6}</li>
-          <li>{ct7}</li>
-        </ul>
-      </div>
+
       <div className="card-foot">
         <div className="time">
-          <img src="./Vector (1).svg" alt="" />
+          <img src="/dongho.svg" alt="" />
           <h3>{t!["serviceItemTime"]}</h3>
         </div>
         <div className="msg">

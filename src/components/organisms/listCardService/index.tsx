@@ -5,6 +5,7 @@ import Message from "@/components/atoms/message";
 import Mess from "@/components/atoms/message";
 import "aos/dist/aos.css";
 import { useTranslation } from "@/components/hooks/useTranslation";
+import Button from "@/components/atoms/button";
 
 interface indexProps {}
 
@@ -13,11 +14,12 @@ const ListCardService: FC<indexProps> = ({}) => {
   return (
     <div>
       <div className="btn-price">
-        <Mess content={t!["servicePageTitle"]} style="big" />
+        <Button href="./" style="staff">
+          {t!["servicePageTitle"]}
+        </Button>
       </div>
       <div
         className="wrap-listcard"
-        // data-aos="flip-left"
         data-aos-easing="ease-out-cubic"
         data-aos-duration="1300"
       >
@@ -46,7 +48,6 @@ const ListCardService: FC<indexProps> = ({}) => {
           ct6={`6. ${t!["serviceItem02Text06"]}`}
         />
         <ServiceCard
-          style="small"
           imgFav="white"
           imgHref="/tholan3.svg"
           title={t!["serviceItem03Title"]}

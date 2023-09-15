@@ -1,3 +1,4 @@
+"use client";
 import { AppProps } from "next/app";
 import React, { FC, useEffect, useState } from "react";
 import "../styles/globals.scss";

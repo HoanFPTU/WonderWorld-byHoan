@@ -1,9 +1,10 @@
+"use client";
 import React, { FC, useContext, useRef, useState } from "react";
 interface TypePage {
   numberPage: number | null;
-  setNumberPage: (message: number) => void;
+  setNumberPage: React.Dispatch<React.SetStateAction<number | null>>;
   numberAnimation: number | null;
-  setNumberAnimation: (message: number) => void;
+  setNumberAnimation: React.Dispatch<React.SetStateAction<number | null>>;
 }
 interface MyPageContextProps {
   children: React.ReactNode;
@@ -16,8 +17,10 @@ export const PageContext = React.createContext<TypePage>({
 });
 
 export const MyPageContext: FC<MyPageContextProps> = ({ children }) => {
-  const [numberPage, setNumberPage] = useState<number | null>(1);
-  const [numberAnimation, setNumberAnimation] = useState<number | null>(100);
+  const [numberPage, setNumberPage] = React.useState<number | null>(1);
+  const [numberAnimation, setNumberAnimation] = React.useState<number | null>(
+    100
+  );
   return (
     <PageContext.Provider
       value={{ numberPage, setNumberPage, numberAnimation, setNumberAnimation }}

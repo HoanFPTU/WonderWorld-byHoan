@@ -11,7 +11,7 @@ import { useTranslation } from "@/components/hooks/useTranslation";
 import { PageContext } from "@/components/useContext/setPage";
 const Project: FC = () => {
   const t = useTranslation();
-  const { numberPage, setNumberPage } = React.useContext(PageContext);
+  const { setNumberPage } = React.useContext(PageContext);
   React.useEffect(() => {
     setNumberPage(1);
   }, []);

@@ -21,7 +21,7 @@ const Listcard: FC<ListcardProps> = ({ sliderRef }) => {
       slidesToShow: 2.6,
       slidesToScroll: 1,
       arrows: false,
-      touchMove: false,
+      touchMove: true,
       responsive: [
         {
           breakpoint: 992,

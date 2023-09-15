@@ -1,15 +1,27 @@
 .card-sevice {
-  height: fit-content;
+  // height: 700px;
   flex-wrap: wrap;
-  width: 33%;
+  width: 400px;
   border: none !important;
   background: linear-gradient(191deg, rgba(231, 249, 253, 0) 0%, #e7f9fd 100%);
-
-  border-radius: 15px !important;
-  position: relative !important;
+  border-radius: 30px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  @media screen and (max-width: 1440px) {
+    width: 310px;
+  }
+  @media screen and (max-width: 1200px) {
+    width: 385px;
+  }
+  @media screen and (max-width: 992px) {
+    width: 500px;
+  }
   .bigImg {
-    width: 255px;
+    width: 100%;
     margin: 0 auto;
+    padding: 12px;
     padding-top: 10px;
     border-radius: 15px;
     overflow: hidden;
@@ -22,63 +34,63 @@
       cursor: pointer;
       transition: 1;
       &:hover {
-        filter: contrast(150%);
-        transform: scale(1.2);
-        transition: transform 1s ease;
+        filter: contrast(120%);
+        transform: scale(1.05);
+        transition: transform 0.5 ease;
       }
     }
   }
   .card-body {
-    padding: 12px;
-    width: 272px;
-    height: 275px;
+    padding: 24px;
   }
   .small {
     height: 100px !important;
   }
   .card-title {
-    font-size: 18px;
+    font-size: 24px;
     font-weight: bold;
-    padding: 2px 6px;
+
+    line-height: 32px;
   }
   ul {
     padding: 0;
     list-style: none;
     li {
-      font-weight: 500;
-      font-size: 12px;
-      padding: 7px;
-      line-height: 15px;
-      &:nth-child(7) {
-        line-height: 21px;
-      }
+      font-weight: 400;
+      font-size: 16px;
+
+      line-height: 32px;
     }
   }
   .card-foot {
-    margin-bottom: 30px;
+    padding: 12px 24px;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     .time {
       display: flex;
       align-items: center;
       justify-content: center;
+      position: relative;
       img {
+        margin-right: 10px;
+
         display: block;
         width: fit-content;
         height: 14px;
-        position: relative;
-        left: -10px;
-        top: -1px;
       }
       h3 {
-        font-size: 11px;
+        font-weight: 500;
+        font-family: Inter;
+        font-size: 14px;
       }
     }
     button {
-      width: 100px;
-      height: 40px;
-      font-size: 12px;
+      padding: 12px 20px;
+      font-weight: 600;
+      width: 122px;
+      height: 43px;
+      font-size: 16px;
     }
   }
   .favorite {

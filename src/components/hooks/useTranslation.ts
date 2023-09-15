@@ -1,3 +1,4 @@
+"use client";
 import { useRouter } from "next/router";
 import en from "../../locales/en";
 import vi from "../../locales/vi";

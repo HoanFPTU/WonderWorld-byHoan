@@ -1,9 +1,8 @@
+"use client";
 import React, { FC, useContext, useRef, useState } from "react";
 import "./index.scss";
 import CarouselBot from "../Carousel_bot";
 import CarouselTop from "../Carousel_top";
-import { createContext } from "vm";
-import { MyPageContext, PageContext } from "@/components/useContext/setPage";
 
 interface CarouselProps {
   children: React.ReactNode;

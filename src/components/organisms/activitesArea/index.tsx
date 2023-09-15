@@ -1,3 +1,5 @@
+"use client";
+"use client";
 import React, { FC, useState } from "react";
 import "./index.scss";
 import ActivitiesItem from "@/components/molecules/activitiesItem";
@@ -55,15 +57,17 @@ const ActivitiesArea: FC<ActivitiesAreaProps> = ({}) => {
     ],
   };
   const [currentPage, setCurrentPage] = useState(1);
-  if (currentPage === 1)
-    return (
-      <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
-        <Buttonactive
-          OnClickpage1={() => setCurrentPage(2)}
-          OnClickpage2={() => setCurrentPage(3)}
-        >
-          Các hoạt động
-        </Buttonactive>
+
+  return (
+    <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
+      <Buttonactive
+        OnClickpage1={() => setCurrentPage(2)}
+        OnClickpage2={() => setCurrentPage(3)}
+      >
+        Các hoạt động
+      </Buttonactive>
+
+      {currentPage === 1 ? (
         <div className="activities-area">
           {activitiesInformation.map(({ imageSrc, title, content }, index) => {
             return (
@@ -77,44 +81,31 @@ const ActivitiesArea: FC<ActivitiesAreaProps> = ({}) => {
             );
           })}
         </div>
-      </div>
-    );
-  if (currentPage === 2)
-    return (
-      <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
-        {" "}
-        <Buttonactive
-          OnClickpage1={() => setCurrentPage(2)}
-          OnClickpage2={() => setCurrentPage(3)}
-        >
-          Các hoạt động
-        </Buttonactive>
+      ) : (
+        <></>
+      )}
+      {currentPage === 2 ? (
         <ActivitiesDetail
           imageSrc={activitiesDetail1.imageSrc}
           title={activitiesDetail1.title}
           content={activitiesDetail1.content}
           buttonPosition="insite"
         />
-      </div>
-    );
-  if (currentPage === 3)
-    return (
-      <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
-        {" "}
-        <Buttonactive
-          OnClickpage1={() => setCurrentPage(2)}
-          OnClickpage2={() => setCurrentPage(3)}
-        >
-          Các hoạt động
-        </Buttonactive>
+      ) : (
+        <></>
+      )}
+      {currentPage === 3 ? (
         <ActivitiesDetail
           imageSrc={activitiesDetail2.imageSrc}
           title={activitiesDetail2.title}
           content={activitiesDetail2.content}
           buttonPosition="insite"
         />
-      </div>
-    );
+      ) : (
+        <></>
+      )}
+    </div>
+  );
 };
 
 export default ActivitiesArea;

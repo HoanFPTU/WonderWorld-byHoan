@@ -1,7 +1,7 @@
 const arrayListCard = [
   {
     src: "/Card/carouselCardProject.svg",
-    href: "/",
+    href: "/project",
     title: `carouselCardProject`,
   },
   {
@@ -21,7 +21,7 @@ const arrayListCard = [
   },
   {
     src: "/Card/carouselCardProject.svg",
-    href: "/",
+    href: "/project",
     title: `carouselCardProject`,
   },
   {
