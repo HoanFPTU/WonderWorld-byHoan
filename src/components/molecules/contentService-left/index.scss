@@ -7,6 +7,9 @@
   align-items: center;
   display: flex;
   width: 350px;
+  @media screen and (max-width: 500px) {
+    width: 270px;
+  }
   margin-top: 20px;
   a {
     text-decoration: none;

@@ -52,7 +52,10 @@
       position: absolute;
     }
     .contentService {
-      width: 308px !important;
+      width: 308px;
+      @media screen and (max-width: 500px) {
+        width: 250px;
+      }
     }
     .contentService-wrap {
       padding: 20px;
