@@ -6,16 +6,7 @@ interface ImageProps {
 }
 
 const ImageActive: FC<ImageProps> = ({ src }) => {
-  return (
-    <Image
-      className="activities-image"
-      src={src}
-      alt=""
-      width="0"
-      height="0"
-      priority
-    />
-  );
+  return <img className="activities-image" src={src} alt="" />;
 };
 
 export default ImageActive;
