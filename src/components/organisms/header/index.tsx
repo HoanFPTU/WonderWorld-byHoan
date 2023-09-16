@@ -22,34 +22,13 @@ const Header: FC<HeaderProps> = ({}) => {
 
           <div className="icons">
             <a href="/">
-              <Image
-                data-aos="flip-left"
-                src="/fb.svg"
-                alt="Facebook"
-                width="0"
-                height="0"
-                priority
-              />
+              <img data-aos="flip-left" src="/fb.svg" alt="Facebook" />
             </a>
             <a href="/">
-              <Image
-                data-aos="flip-left"
-                src="/Twister.svg"
-                alt="Twister"
-                width="0"
-                height="0"
-                priority
-              />
+              <img data-aos="flip-left" src="/Twister.svg" alt="Twister" />
             </a>
             <a href="/">
-              <Image
-                data-aos="flip-left"
-                src="/instagram.svg"
-                alt="Instagram"
-                width="0"
-                height="0"
-                priority
-              />
+              <img data-aos="flip-left" src="/instagram.svg" alt="Instagram" />
             </a>
           </div>
         </div>

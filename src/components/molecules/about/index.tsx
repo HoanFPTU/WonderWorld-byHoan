@@ -5,7 +5,7 @@ import "./index.scss";
 
 import { useTranslation } from "@/components/hooks/useTranslation";
 import Link from "next/link";
-import Image from "next/image";
+
 interface indexProps {}
 
 const About: FC<indexProps> = ({}) => {
@@ -20,35 +20,14 @@ const About: FC<indexProps> = ({}) => {
         <div className="about__bottom">
           <div className="icons">
             <Link href="#">
-              <Image
-                data-aos="flip-left"
-                src="/Twister.svg"
-                alt="Twister"
-                width="0"
-                height="0"
-                priority
-              />
+              <img data-aos="flip-left" src="/Twister.svg" alt="Twister" />
             </Link>
             <Link href="#">
-              <Image
-                data-aos="flip-left"
-                src="/fb.svg"
-                alt="Facebook"
-                width="0"
-                height="0"
-                priority
-              />
+              <img data-aos="flip-left" src="/fb.svg" alt="Facebook" />
             </Link>
 
             <Link href="#">
-              <Image
-                data-aos="flip-left"
-                src="/instagram.svg"
-                alt="Instagram"
-                width="0"
-                height="0"
-                priority
-              />
+              <img data-aos="flip-left" src="/instagram.svg" alt="Instagram" />
             </Link>
           </div>
         </div>
