@@ -17,7 +17,7 @@ const Project: FC = () => {
   }, []);
   return (
     <>
-      <PageTemplate background="/bg1.jpeg">
+      <PageTemplate background="/backgroundTemplate/bg1.jpeg">
         <Carousel>{t!["carouselStaffProject"]}</Carousel>
         <div className="cover-project">
           <ServiceLeft />

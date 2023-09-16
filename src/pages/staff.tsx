@@ -18,7 +18,7 @@ const staff = () => {
   }, []);
   return (
     <>
-      <PageTemplate background="/bg2-2.svg">
+      <PageTemplate background="/bg2-2.svg" animation="flip-right">
         <Carousel>{t!["carouselStaffPage"]}</Carousel>
         <div className="block">
           <Button href="./" style="staff">

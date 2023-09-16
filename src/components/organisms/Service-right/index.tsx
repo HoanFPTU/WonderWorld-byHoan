@@ -12,7 +12,7 @@ const ServiceRight: FC<indexProps> = ({ id }) => {
   return (
     <div className="ResService-RightSide" id={`${id}`} data-aos="zoom-in">
       <div className="ResService-RightSide__Left">
-        <BigCard style={{ marginLeft: "70px" }} />
+        <BigCard src="/sanho2.svg" style={{ marginLeft: "70px" }} />
       </div>
       <div className="ResService-RightSide__Right">
         <ContentServiceRight />

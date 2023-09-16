@@ -201,15 +201,7 @@ const Navigation: FC = ({}) => {
             >
               <div>
                 {currentLanguage}
-                <Image
-                  data-aos="flip-left"
-                  className="v-icon"
-                  src="/v-icon.svg"
-                  alt=""
-                  width="0"
-                  height="0"
-                  priority
-                />
+                <img className="v-icon" src="/v-icon.svg" alt="" />
               </div>
               <div className="language-options">
                 <div>

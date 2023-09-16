@@ -2,20 +2,14 @@ import React, { FC } from "react";
 import "./index.scss";
 import Image from "next/image";
 interface indexProps {
-  style: React.CSSProperties;
+  style?: React.CSSProperties;
+  src: string;
 }
 
-const BigCard: FC<indexProps> = ({ style }) => {
+const BigCard: FC<indexProps> = ({ style, src }) => {
   return (
     <div className="bigCard">
-      <Image
-        data-aos="flip-left"
-        src="/sanho.svg"
-        alt=""
-        width="0"
-        height="0"
-        priority
-      />
+      <Image src={src} alt="" width="0" height="0" />
     </div>
   );
 };

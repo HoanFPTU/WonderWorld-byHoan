@@ -31,7 +31,10 @@ const Project: FC = () => {
           ease: "easeInOut",
         }}
       > */}{" "}
-      <PageTemplate background="/bg1.jpeg">
+      <PageTemplate
+        background="/backgroundTemplate/bg1.jpeg"
+        animation="flip-right"
+      >
         <Carousel>Dự Án Bảo Tồn Bãi Biển</Carousel>
         <div className="cover-project">
           <ServiceLeft />

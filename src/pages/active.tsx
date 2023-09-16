@@ -30,8 +30,10 @@ const ActivePage: FC = ({}) => {
           ease: "easeInOut",
         }}
       > */}
-      <PageTemplate background="/backgroundTemplate/active.svg">
-        {/* background="/bg1.svg" */}
+      <PageTemplate
+        background="/backgroundTemplate/active.jpg"
+        animation="flip-right"
+      >
         <Carousel> {t!["carouselCardActivities"]}</Carousel>
         <div>
           <ActivitiesArea></ActivitiesArea>

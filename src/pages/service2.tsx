@@ -29,7 +29,10 @@ const service: FC<serviceProps> = ({}) => {
           ease: "easeInOut",
         }}
       > */}{" "}
-      <PageTemplate background="/dVuLan.png">
+      <PageTemplate
+        background="/backgroundTemplate/lanbien.jpg"
+        animation="flip-left"
+      >
         <Carousel>{t!["carouselStaffService"]}</Carousel>
         <div>
           <ListCardService />

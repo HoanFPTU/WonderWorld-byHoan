@@ -4,7 +4,7 @@ import PageTemplate from "@/components/templates/page-template";
 const Media: FC = () => {
   return (
     <div className="media-area">
-      <PageTemplate background="/bg-media-page.svg">
+      <PageTemplate background="/backgroundTemplate/bg-media-page.jpg">
         <div id="background-wrap">
           <div className="bubble x1">
             <span></span>

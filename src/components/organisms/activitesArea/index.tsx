@@ -3,13 +3,16 @@ import "./index.scss";
 import ActivitiesItem from "@/components/molecules/activitiesItem";
 import ActivitiesDetail from "@/components/molecules/activitiesDetail";
 import Buttonactive from "@/components/molecules/Button_active";
+import { useTranslation } from "@/components/hooks/useTranslation";
 interface ActivitiesAreaProps {}
 
 const ActivitiesArea: FC<ActivitiesAreaProps> = ({}) => {
+  const t = useTranslation();
   const activitiesInformation = [
     {
-      imageSrc: "/activities1.svg",
-      title: `Rạn san hô là gì?`,
+      imageSrc: "/active/activities1.jpg",
+
+      title: t!["activitiesItem01Title"],
       content: `Được ví như “rừng mưa nhiệt đới dưới đáy biển”,
       các rạn san hô là nơi sinh sống của khoảng 25% các
       loài sinh vật biển. Rạn san hô cung cấp nơi trú ẩn
@@ -17,7 +20,7 @@ const ActivitiesArea: FC<ActivitiesAreaProps> = ({}) => {
       hô phân bố ở các vùng biển nhiệt đới và ôn đới.`,
     },
     {
-      imageSrc: "/activities2.svg",
+      imageSrc: "/active/activities2.jpg",
       title: `San hô cứng là gì?`,
       content: `Có bộ xương chứa đá vôi (canxi cacbonat),
       là thành phần chính cấu thành nên rạn san
@@ -25,21 +28,21 @@ const ActivitiesArea: FC<ActivitiesAreaProps> = ({}) => {
       trên nền đá vôi đó.`,
     },
     {
-      imageSrc: "/activities3.svg",
+      imageSrc: "/active/activities3.jpg",
       title: `San hô mềm là gì?`,
       content: `Không có xương, rất mềm dẻo.
       Khi chúng chết đi sẽ không để lại gì cả.
       `,
     },
     {
-      imageSrc: "/activities4.svg",
+      imageSrc: "/active/activities4.jpg",
       title: `San hô mềm là gì?`,
       content: `San hô là loài động vật không xương sống thuộc
       ngành ruột khoang, được cấu tạo từ các polyp nhỏ.`,
     },
   ];
   const activitiesDetail1 = {
-    imageSrc: `/activities5.svg`,
+    imageSrc: `/active/active1.jpg`,
     title: `1-Chương trình trồng san hô`,
     content: [
       `Wonder World chúng tôi hiện đang là đơn vị tiên phong trong lĩnh vực thực hiện dự án khoa hoc về viẹc phục hồi, tái tạo và bảo vệ đa dạng sinh học thông qua chương trình trồng san hô.`,
@@ -47,7 +50,7 @@ const ActivitiesArea: FC<ActivitiesAreaProps> = ({}) => {
     ],
   };
   const activitiesDetail2 = {
-    imageSrc: `/activities6.svg`,
+    imageSrc: `/active/active2.jpg`,
     title: `2- chương trình nghiên cứu khoa học biển, san hô`,
     content: [
       `Wonder world với định hướng trở thành tâm điểm phát triển chương trình Công dân toàn cầu và mạng lưới các nhà khoa học trẻ toàn cầu  tại Việt Nam dứoi sự hỗ trợ và dân dắt của chương trình mạng lưới công dân toàn cầu ( Citizen Global )  của liên hiệp quốc về môi trường  (UNEP) và UNESSCO-CEP, chúng tôi mang đén các chương trình học cho các cấp độ, các chương trình nghiên cứu thực tiễn tại hiện trường và trong phòng Lab, kết hợp với công nghệ tương tác, thực tế ảo tăng cường, nhẳm rút ngắn khoảng cách trở thành mọt nhà khoa học, nhà nghiên cứu độc lập trong tương lai của mỗi cá nhân trong xã hội hiện tại.`,
@@ -62,7 +65,7 @@ const ActivitiesArea: FC<ActivitiesAreaProps> = ({}) => {
         OnClickpage1={() => setCurrentPage(2)}
         OnClickpage2={() => setCurrentPage(3)}
       >
-        Các hoạt động
+        {t!["activitiesButtonActiveTitle"]}
       </Buttonactive>
 
       {currentPage === 1 ? (

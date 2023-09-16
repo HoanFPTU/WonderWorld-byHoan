@@ -13,12 +13,12 @@ const Card: FC<CardProps> = ({ children, src, href }) => {
     <div className="divcard">
       <div className={`card `}>
         <Image
-          data-aos="flip-left"
           src={src}
           alt=""
-          width="0"
-          height="0"
+          width="100"
+          height={100}
           priority
+          style={{ objectFit: "cover" }}
         />
         <Link href={href} className="card__text">
           {children}

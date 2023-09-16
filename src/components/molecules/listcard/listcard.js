@@ -1,36 +1,36 @@
 const arrayListCard = [
   {
-    src: "/Card/carouselCardProject.svg",
+    src: "/Card/carouselCardProject.jpg",
     href: "/project",
     title: `carouselCardProject`,
   },
   {
-    src: "/Card/carouselCardStaff.svg",
+    src: "/Card/carouselCardStaff.jpg",
     href: "staff",
     title: `carouselCardStaff`,
   },
   {
-    src: "/Card/carouselCardActivities.svg",
+    src: "/Card/carouselCardActivities.jpg",
     href: "active",
     title: `carouselCardActivities`,
   },
   {
-    src: "/Card/carouselCardService.svg",
+    src: "/Card/carouselCardService.jpg",
     href: "service",
     title: `carouselCardService`,
   },
   {
-    src: "/Card/carouselCardProject.svg",
+    src: "/Card/carouselCardProject.jpg",
     href: "/project",
     title: `carouselCardProject`,
   },
   {
-    src: "/Card/carouselCardStaff.svg",
+    src: "/Card/carouselCardStaff.jpg",
     href: "staff",
     title: `carouselCardStaff`,
   },
   {
-    src: "/Card/carouselCardActivities.svg",
+    src: "/Card/carouselCardActivities.jpg",
     href: "active",
     title: `carouselCardActivities`,
   },

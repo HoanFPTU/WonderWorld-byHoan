@@ -42,30 +42,13 @@ const ServiceCard: FC<indexProps> = ({
   return (
     <div className="card-sevice">
       <React.Fragment>
-        <img
-          data-aos="flip-left"
-          src={imgHref}
-          className="card-img-top"
-          alt="..."
-        />
+        <img src={imgHref} className="card-img-top" alt="..." />
         <div className="favorite">
           <div className="Ellipse">
-            <Image
-              data-aos="flip-left"
-              src="/Ellipse.svg"
-              alt=""
-              width="0"
-              height="0"
-              priority
-            />
+            <Image src="/Ellipse.svg" alt="" width="0" height="0" priority />
           </div>
           <div className="heart">
-            <img
-              data-aos="flip-left"
-              src={heartImgSrc}
-              alt=""
-              onClick={handleHeartClick}
-            />
+            <img src={heartImgSrc} alt="" onClick={handleHeartClick} />
           </div>
         </div>
         <div className={`card-body `}>
@@ -88,14 +71,7 @@ const ServiceCard: FC<indexProps> = ({
 
       <div className="card-foot">
         <div className="time">
-          <Image
-            data-aos="flip-left"
-            src="/dongho.svg"
-            alt=""
-            width="0"
-            height="0"
-            priority
-          />
+          <Image src="/dongho.svg" alt="" width="0" height="0" priority />
           <h3>{t!["serviceItemTime"]}</h3>
         </div>
         <div className="msg">

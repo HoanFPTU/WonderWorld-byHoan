@@ -4,7 +4,7 @@ import React, { FC } from "react";
 const Logo: FC = () => {
   return (
     <Link href={"/"}>
-      <img data-aos="flip-left" src="/logo.svg" alt="" />
+      <img src="/logo.svg" alt="" />
     </Link>
   );
 };

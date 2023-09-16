@@ -25,7 +25,7 @@ const ListCardService: FC<indexProps> = ({}) => {
       >
         <ServiceCard
           imgFav="red"
-          imgHref="/tholan1.svg"
+          imgHref="/tholan1.jpg"
           title={t!["serviceItem01Title"]}
           ct1={`1. ${t!["serviceItem01Text01"]}`}
           ct2={`2. ${t!["serviceItem01Text02"]}`}
@@ -38,7 +38,7 @@ const ListCardService: FC<indexProps> = ({}) => {
 
         <ServiceCard
           imgFav="white"
-          imgHref="/tholan3.svg"
+          imgHref="/tholan2.jpg"
           title={t!["serviceItem02Title"]}
           ct1={`1. ${t!["serviceItem02Text01"]}`}
           ct2={`2. ${t!["serviceItem02Text02"]}`}
@@ -49,7 +49,7 @@ const ListCardService: FC<indexProps> = ({}) => {
         />
         <ServiceCard
           imgFav="white"
-          imgHref="/tholan3.svg"
+          imgHref="/tholan2.jpg"
           title={t!["serviceItem03Title"]}
           ct1={`${t!["serviceItem03Text01"]}`}
         />

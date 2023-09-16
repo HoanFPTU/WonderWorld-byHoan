@@ -27,7 +27,7 @@ const staff = () => {
     //     ease: "easeInOut",
     //   }}
     // >
-    <PageTemplate background="/bg2-2.svg">
+    <PageTemplate background="/bg2-2.svg" animation="flip-left">
       <Carousel>{t!["carouselStaffPage"]}</Carousel>
       <div id="page2" className="block">
         <Button href="./" style="staff">

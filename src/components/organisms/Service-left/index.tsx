@@ -14,7 +14,7 @@ const ServiceLeft: FC<indexProps> = ({ id }) => {
         <ContentServiceLeft />
       </div>
       <div className="ResService-Right">
-        <BigCard style={{ marginLeft: "70px" }} />
+        <BigCard src="/sanho.svg" style={{ marginLeft: "70px" }} />
       </div>
     </div>
   );

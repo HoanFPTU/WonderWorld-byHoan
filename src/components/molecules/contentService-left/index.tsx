@@ -20,7 +20,6 @@ const ContentServiceLeft: FC<indexProps> = () => {
         <div className="icon">
           <Link href="#">{t!["projectItemUpdating"]}</Link>
           <Image
-            data-aos="flip-left"
             src="/arrow_downward_24px.svg"
             alt=""
             width="0"
