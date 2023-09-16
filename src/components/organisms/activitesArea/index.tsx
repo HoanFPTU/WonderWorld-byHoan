@@ -13,48 +13,38 @@ const ActivitiesArea: FC<ActivitiesAreaProps> = ({}) => {
       imageSrc: "/active/activities1.jpg",
 
       title: t!["activitiesItem01Title"],
-      content: `Được ví như “rừng mưa nhiệt đới dưới đáy biển”,
-      các rạn san hô là nơi sinh sống của khoảng 25% các
-      loài sinh vật biển. Rạn san hô cung cấp nơi trú ẩn
-      và thức ăn cho hơn 4000 loài cá. Phần lớn rạn san
-      hô phân bố ở các vùng biển nhiệt đới và ôn đới.`,
+      content: t!["activitiesItem01Content"],
     },
     {
       imageSrc: "/active/activities2.jpg",
-      title: `San hô cứng là gì?`,
-      content: `Có bộ xương chứa đá vôi (canxi cacbonat),
-      là thành phần chính cấu thành nên rạn san
-      hô. Khi chúng chết đi để lại bộ xương đá vôi và rồi san hô mới lại tiếp tục phát triển
-      trên nền đá vôi đó.`,
+      title: t!["activitiesItem02Title"],
+      content: t!["activitiesItem02Content"],
     },
     {
       imageSrc: "/active/activities3.jpg",
-      title: `San hô mềm là gì?`,
-      content: `Không có xương, rất mềm dẻo.
-      Khi chúng chết đi sẽ không để lại gì cả.
-      `,
+      title: t!["activitiesItem03Title"],
+      content: t!["activitiesItem03Content"],
     },
     {
-      imageSrc: "/active/activities4.jpg",
+      imageSrc: t!["activitiesItem04Title"],
       title: `San hô mềm là gì?`,
-      content: `San hô là loài động vật không xương sống thuộc
-      ngành ruột khoang, được cấu tạo từ các polyp nhỏ.`,
+      content: t!["activitiesItem04Content"],
     },
   ];
   const activitiesDetail1 = {
     imageSrc: `/active/active1.jpg`,
-    title: `1-Chương trình trồng san hô`,
+    title: t!["activitiesDetail01Title"],
     content: [
-      `Wonder World chúng tôi hiện đang là đơn vị tiên phong trong lĩnh vực thực hiện dự án khoa hoc về viẹc phục hồi, tái tạo và bảo vệ đa dạng sinh học thông qua chương trình trồng san hô.`,
-      `Trồng san hô - là cách để bảo vê, gìn dữ, tái tạo, và phục hồi .Dự án được thực hiện dứoi sự hướng dẫn và cố vấn của cộng đồng chuyên gia của Việt Nam tại viện hải dương học, Trung tâm nhiệt đới Việt Nga, và cộng đồng các nhà khoa học quốc tế từ ÚC -AIMS, Mỹ - NOOA.`,
+      t!["activitiesDetail01Content01"],
+      t!["activitiesDetail01Content02"],
     ],
   };
   const activitiesDetail2 = {
     imageSrc: `/active/active2.jpg`,
-    title: `2- chương trình nghiên cứu khoa học biển, san hô`,
+    title: t!["activitiesDetail02Title"],
     content: [
-      `Wonder world với định hướng trở thành tâm điểm phát triển chương trình Công dân toàn cầu và mạng lưới các nhà khoa học trẻ toàn cầu  tại Việt Nam dứoi sự hỗ trợ và dân dắt của chương trình mạng lưới công dân toàn cầu ( Citizen Global )  của liên hiệp quốc về môi trường  (UNEP) và UNESSCO-CEP, chúng tôi mang đén các chương trình học cho các cấp độ, các chương trình nghiên cứu thực tiễn tại hiện trường và trong phòng Lab, kết hợp với công nghệ tương tác, thực tế ảo tăng cường, nhẳm rút ngắn khoảng cách trở thành mọt nhà khoa học, nhà nghiên cứu độc lập trong tương lai của mỗi cá nhân trong xã hội hiện tại.`,
-      `Với mục tiêu: mỗi công dân trẻ Việt Nam - đều có thể trở thành 1 nhà khoa học trong tương lai và đó là cách để " Cho một Việt Nam thêm Thịnh Vượng " - đơn giản vì " tôi yêu Việt Nam"`,
+      t!["activitiesDetail02Content01"],
+      t!["activitiesDetail02Content02"],
     ],
   };
   const [currentPage, setCurrentPage] = useState(1);

@@ -7,6 +7,7 @@ import Content from "@/components/atoms/activities/content";
 import Message from "@/components/atoms/message";
 import Button from "@/components/atoms/button";
 import ImageActive from "@/components/atoms/activities/image";
+import { useTranslation } from "@/components/hooks/useTranslation";
 interface ActivitiesDetailProps {
   imageSrc: string;
   title: string;
@@ -20,6 +21,7 @@ const ActivitiesDetail: FC<ActivitiesDetailProps> = ({
   content,
   buttonPosition,
 }) => {
+  const t = useTranslation();
   return (
     <div className="activities-detail">
       <div className="activities-detail-container">
@@ -48,7 +50,7 @@ const ActivitiesDetail: FC<ActivitiesDetailProps> = ({
           {buttonPosition == "insite" ? (
             <div className="activities-detail-container-information-button">
               <Button style="black" href="">
-                Chúng tôi sẽ sớm cập nhật thông tin thêm
+                {t!["activitiesDetailButtonText"]}
               </Button>
             </div>
           ) : (
@@ -61,7 +63,7 @@ const ActivitiesDetail: FC<ActivitiesDetailProps> = ({
           <div className="activities-detail-container-information-button">
             <div className="button-outsite">
               <Button style="black" href="">
-                Chúng tôi sẽ sớm cập nhật thông tin thêm
+                {t!["activitiesDetailButtonText"]}
               </Button>
             </div>
           </div>

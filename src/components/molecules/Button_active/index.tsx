@@ -32,7 +32,7 @@ const Buttonactive: FC<ButtonactiveProps> = ({
           >
             <p onClick={() => OnClickpage1()}>{t!["projectItemLeftTitle"]}</p>
             <p style={{ marginTop: "12px" }} onClick={() => OnClickpage2()}>
-              Khoa học về san hô
+              {t!["activitiesButtonActiveItem02"]}
             </p>
           </div>
         </Button>
