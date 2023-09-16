@@ -14,8 +14,8 @@ const Staffname: FC<StaffnameProps> = ({ rule, level, fullname }) => {
         <h3 className="nameStaff"> {fullname}</h3>
         <p className="ruleStaff">{rule}</p>
         <div className="levelStaff">
-          <img data-aos="flip-left" priority={true} src="/level.svg" alt="" />
-          <img data-aos="flip-left" priority={true} src="/level.svg" alt="" />
+          <img data-aos="flip-left" src="/level.svg" alt="" />
+          <img data-aos="flip-left" src="/level.svg" alt="" />
         </div>
       </div>
     );
@@ -24,10 +24,10 @@ const Staffname: FC<StaffnameProps> = ({ rule, level, fullname }) => {
       <h3 className="nameStaff"> {fullname}</h3>
       <p className="ruleStaff">{rule}</p>
       <div className="levelStaff">
-        <img data-aos="flip-left" priority={true} src="/level.svg" alt="" />
-        <img data-aos="flip-left" priority={true} src="/level.svg" alt="" />
-        <img data-aos="flip-left" priority={true} src="/level.svg" alt="" />
-        <img data-aos="flip-left" priority={true} src="/level.svg" alt="" />
+        <img data-aos="flip-left" src="/level.svg" alt="" />
+        <img data-aos="flip-left" src="/level.svg" alt="" />
+        <img data-aos="flip-left" src="/level.svg" alt="" />
+        <img data-aos="flip-left" src="/level.svg" alt="" />
       </div>
     </div>
   );

@@ -18,12 +18,7 @@ const ContentServiceLeft: FC<indexProps> = () => {
         <EventDetail content={t!["projectItemLeftDetail"]} />
         <div className="icon">
           <Link href="#">{t!["projectItemUpdating"]}</Link>
-          <img
-            data-aos="flip-left"
-            priority={true}
-            src="/arrow_downward_24px.svg"
-            alt=""
-          />
+          <img data-aos="flip-left" src="/arrow_downward_24px.svg" alt="" />
         </div>
       </div>
     </div>

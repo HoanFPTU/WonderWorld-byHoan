@@ -180,12 +180,7 @@ const Navigation: FC = ({}) => {
               }}
             >
               {currentLanguage}
-              <img
-                data-aos="flip-left"
-                priority={true}
-                className="v-icon"
-                src="/v-icon.svg"
-              />
+              <img data-aos="flip-left" className="v-icon" src="/v-icon.svg" />
             </div>
             <div
               className="language-options-area"
@@ -199,7 +194,6 @@ const Navigation: FC = ({}) => {
                 {currentLanguage}
                 <img
                   data-aos="flip-left"
-                  priority={true}
                   className="v-icon"
                   src="/v-icon.svg"
                 />
@@ -241,12 +235,7 @@ const Navigation: FC = ({}) => {
               }}
             >
               {currentLanguage}
-              <img
-                data-aos="flip-left"
-                priority={true}
-                className="v-icon"
-                src="/v-icon.svg"
-              />
+              <img data-aos="flip-left" className="v-icon" src="/v-icon.svg" />
             </div>
             <div
               className="language-options-area"
@@ -260,7 +249,6 @@ const Navigation: FC = ({}) => {
                 {currentLanguage}
                 <img
                   data-aos="flip-left"
-                  priority={true}
                   className="v-icon"
                   src="/v-icon.svg"
                 />

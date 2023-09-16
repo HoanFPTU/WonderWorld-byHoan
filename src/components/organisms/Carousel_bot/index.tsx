@@ -34,20 +34,10 @@ const CarouselBot: FC<CarouselBotProps> = ({ sliderRef }) => {
     <div className="Carousel_bot">
       <div className="Carousel_bot__top">
         <Button style="circle" func={() => handlePrev()}>
-          <img
-            data-aos="flip-left"
-            priority={true}
-            src="/preslide.svg"
-            alt=""
-          />
+          <img data-aos="flip-left" src="/preslide.svg" alt="" />
         </Button>
         <Button style="circle" func={() => handleNext()}>
-          <img
-            data-aos="flip-left"
-            priority={true}
-            src="/nextslide.svg"
-            alt=""
-          />
+          <img data-aos="flip-left" src="/nextslide.svg" alt="" />
         </Button>
         <Progress></Progress>
       </div>

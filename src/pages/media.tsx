@@ -92,7 +92,7 @@ const Media: FC = () => {
           </div>
         </div>
         <div className="media">
-          {/* <img data-aos="flip-left" priority={true} className="media-background-image" src="/bg-media-page.svg" /> */}
+          {/* <img data-aos="flip-left"   className="media-background-image" src="/bg-media-page.svg" /> */}
         </div>
       </PageTemplate>
     </div>

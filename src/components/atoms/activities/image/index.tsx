@@ -5,14 +5,7 @@ interface ImageProps {
 }
 
 const Image: FC<ImageProps> = ({ src }) => {
-  return (
-    <img
-      data-aos="flip-left"
-      priority={true}
-      className={`activities-image `}
-      src={src}
-    />
-  );
+  return <img data-aos="flip-left" className={`activities-image `} src={src} />;
 };
 
 export default Image;
