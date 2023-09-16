@@ -11,7 +11,7 @@ const Card: FC<CardProps> = ({ children, src, href }) => {
   return (
     <div className="divcard">
       <div className={`card `}>
-        <img src={src} />
+        <img priority={true} src={src} />
         <Link href={href} className="card__text">
           {children}
         </Link>

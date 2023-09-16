@@ -21,13 +21,13 @@ const Header: FC<HeaderProps> = ({}) => {
 
           <div className="icons">
             <a href="/">
-              <img src="/fb.svg" alt="Facebook" />
+              <img priority={true} src="/fb.svg" alt="Facebook" />
             </a>
             <a href="/">
-              <img src="/Twister.svg" alt="Twister" />
+              <img priority={true} src="/Twister.svg" alt="Twister" />
             </a>
             <a href="/">
-              <img src="/instagram.svg" alt="Instagram" />
+              <img priority={true} src="/instagram.svg" alt="Instagram" />
             </a>
           </div>
         </div>

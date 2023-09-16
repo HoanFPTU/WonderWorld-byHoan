@@ -92,7 +92,7 @@ const Media: FC = () => {
           </div>
         </div>
         <div className="media">
-          {/* <img className="media-background-image" src="/bg-media-page.svg" /> */}
+          {/* <img priority={true} className="media-background-image" src="/bg-media-page.svg" /> */}
         </div>
       </PageTemplate>
     </div>

@@ -1,7 +1,6 @@
 import React, { FC } from "react";
 import "../styles/service.scss";
 
-import ScrollSpy from "react-ui-scrollspy";
 import Carousel from "@/components/organisms/Carousel";
 import { motion } from "framer-motion";
 import ListCardService from "@/components/organisms/listCardService";
@@ -32,12 +31,10 @@ const service: FC<serviceProps> = ({}) => {
       >
         {" "}
         <PageTemplate background="/dVuLan.png">
-          <ScrollSpy scrollThrottle={50} offsetTop={50} offsetBottom={50}>
-            <Carousel>{t!["carouselStaffService"]}</Carousel>
-            <div>
-              <ListCardService />
-            </div>
-          </ScrollSpy>
+          <Carousel>{t!["carouselStaffService"]}</Carousel>
+          <div>
+            <ListCardService />
+          </div>
         </PageTemplate>
       </motion.div>
     </>

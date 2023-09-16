@@ -180,7 +180,7 @@ const Navigation: FC = ({}) => {
               }}
             >
               {currentLanguage}
-              <img className="v-icon" src="/v-icon.svg" />
+              <img priority={true} className="v-icon" src="/v-icon.svg" />
             </div>
             <div
               className="language-options-area"
@@ -192,7 +192,7 @@ const Navigation: FC = ({}) => {
             >
               <div>
                 {currentLanguage}
-                <img className="v-icon" src="/v-icon.svg" />
+                <img priority={true} className="v-icon" src="/v-icon.svg" />
               </div>
               <div className="language-options">
                 <div>
@@ -231,7 +231,7 @@ const Navigation: FC = ({}) => {
               }}
             >
               {currentLanguage}
-              <img className="v-icon" src="/v-icon.svg" />
+              <img priority={true} className="v-icon" src="/v-icon.svg" />
             </div>
             <div
               className="language-options-area"
@@ -243,7 +243,7 @@ const Navigation: FC = ({}) => {
             >
               <div>
                 {currentLanguage}
-                <img className="v-icon" src="/v-icon.svg" />
+                <img priority={true} className="v-icon" src="/v-icon.svg" />
               </div>
               <div className="language-options">
                 <div>

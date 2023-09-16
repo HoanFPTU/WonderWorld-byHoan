@@ -4,7 +4,7 @@ import React, { FC } from "react";
 const Logo: FC = () => {
   return (
     <Link href={"/"}>
-      <img src="/logo.svg" alt="" />
+      <img priority={true} src="/logo.svg" alt="" />
     </Link>
   );
 };

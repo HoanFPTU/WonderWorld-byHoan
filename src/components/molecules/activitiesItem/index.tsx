@@ -17,7 +17,7 @@ const ActivitiesItem: FC<ActivitiesItem> = ({ imageSrc, title, content }) => {
         className="activities-item-image"
         style={{ backgroundImage: `url(${imageSrc})` }}
       >
-        <Image src={`bg1.jpeg`} />
+        {/* <Image src={`bg1.jpeg`} /> */}
       </div>
       <div className="activities-item-information">
         <Title color="title-color-yellow" text="text-uppercase">

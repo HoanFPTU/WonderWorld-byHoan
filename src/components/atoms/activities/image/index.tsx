@@ -5,7 +5,7 @@ interface ImageProps {
 }
 
 const Image: FC<ImageProps> = ({ src }) => {
-  return <img className={`activities-image `} src={src} />;
+  return <img priority={true} className={`activities-image `} src={src} />;
 };
 
 export default Image;

@@ -19,14 +19,14 @@ const About: FC<indexProps> = ({}) => {
         <div className="about__bottom">
           <div className="icons">
             <Link href="#">
-              <img src="/Twister.svg" alt="Twister" />
+              <img priority={true} src="/Twister.svg" alt="Twister" />
             </Link>
             <Link href="#">
-              <img src="/fb.svg" alt="Facebook" />
+              <img priority={true} src="/fb.svg" alt="Facebook" />
             </Link>
 
             <Link href="#">
-              <img src="/instagram.svg" alt="Instagram" />
+              <img priority={true} src="/instagram.svg" alt="Instagram" />
             </Link>
           </div>
         </div>

@@ -1,5 +1,4 @@
 "use client";
-"use client";
 import React, { FC, useState } from "react";
 import "./index.scss";
 import ActivitiesItem from "@/components/molecules/activitiesItem";
