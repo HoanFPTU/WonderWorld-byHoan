@@ -1,11 +1,12 @@
 import React, { FC } from "react";
 import "./index.scss";
-import Image from "@/components/atoms/activities/image";
+
 import Title from "@/components/atoms/activities/title";
 import Border from "@/components/atoms/activities/border";
 import Content from "@/components/atoms/activities/content";
 import Message from "@/components/atoms/message";
 import Button from "@/components/atoms/button";
+import ImageActive from "@/components/atoms/activities/image";
 interface ActivitiesDetailProps {
   imageSrc: string;
   title: string;
@@ -32,7 +33,7 @@ const ActivitiesDetail: FC<ActivitiesDetailProps> = ({
       <div></div>
       <div className="activities-detail-container">
         <div className="activities-detail-container-image">
-          <Image src={imageSrc} />
+          <ImageActive src={imageSrc} />
         </div>
 
         <div className="activities-detail-container-information">

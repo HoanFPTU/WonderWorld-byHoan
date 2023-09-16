@@ -3,6 +3,7 @@ import React, { FC } from "react";
 import "./index.scss";
 import Staffname from "@/components/atoms/Staffname";
 import { useTranslation } from "@/components/hooks/useTranslation";
+import Image from "next/image";
 interface InforstaffProps {}
 
 const Inforstaff: FC<InforstaffProps> = ({}) => {
@@ -11,7 +12,14 @@ const Inforstaff: FC<InforstaffProps> = ({}) => {
     <div className="inforstaff">
       <div className="inforstaff__top">
         <div className="box-staff">
-          <img data-aos="flip-left" src="/staff1.svg" alt="" />
+          <Image
+            data-aos="flip-left"
+            src="/staff1.svg"
+            alt=""
+            width="0"
+            height="0"
+            priority
+          />
           <Staffname
             fullname={t!["staffMember01Fullname"]}
             level={4}
@@ -24,13 +32,27 @@ const Inforstaff: FC<InforstaffProps> = ({}) => {
             level={2}
             rule={t!["staffMember02Rule"]}
           ></Staffname>
-          <img data-aos="flip-left" src="/staff2.svg" alt="" />
+          <Image
+            data-aos="flip-left"
+            src="/staff2.svg"
+            alt=""
+            width="0"
+            height="0"
+            priority
+          />
         </div>
       </div>
       <div className="inforstaff__bot">
         <div className="box-staff2">
           <div className="box-staff">
-            <img data-aos="flip-left" src="/staff3.svg" alt="" />
+            <Image
+              data-aos="flip-left"
+              src="/staff3.svg"
+              alt=""
+              width="0"
+              height="0"
+              priority
+            />
             <Staffname
               fullname={t!["staffMember03Fullname"]}
               level={2}
@@ -38,7 +60,14 @@ const Inforstaff: FC<InforstaffProps> = ({}) => {
             ></Staffname>
           </div>
           <div className="box-staff">
-            <img data-aos="flip-left" src="/staff4.svg" alt="" />
+            <Image
+              data-aos="flip-left"
+              src="/staff4.svg"
+              alt=""
+              width="0"
+              height="0"
+              priority
+            />
             <Staffname
               fullname={t!["staffMember04Fullname"]}
               level={2}
@@ -48,7 +77,14 @@ const Inforstaff: FC<InforstaffProps> = ({}) => {
         </div>
         <div className="box-staff2">
           <div className="box-staff">
-            <img data-aos="flip-left" src="/staff5.svg" alt="" />
+            <Image
+              data-aos="flip-left"
+              src="/staff5.svg"
+              alt=""
+              width="0"
+              height="0"
+              priority
+            />
             <Staffname
               fullname={t!["staffMember05Fullname"]}
               level={2}
@@ -56,7 +92,14 @@ const Inforstaff: FC<InforstaffProps> = ({}) => {
             ></Staffname>
           </div>
           <div className="box-staff">
-            <img data-aos="flip-left" src="/staff6.svg" alt="" />
+            <Image
+              data-aos="flip-left"
+              src="/staff6.svg"
+              alt=""
+              width="0"
+              height="0"
+              priority
+            />
             <Staffname
               fullname={t!["staffMember06Fullname"]}
               level={2}

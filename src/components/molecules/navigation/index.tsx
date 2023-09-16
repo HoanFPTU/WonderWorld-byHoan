@@ -4,6 +4,7 @@ import React, { FC, useEffect, useState } from "react";
 import "./index.scss";
 import { useTranslation } from "../../hooks/useTranslation";
 import { useRouter } from "next/router";
+import Image from "next/image";
 
 const Navigation: FC = ({}) => {
   const router = useRouter();
@@ -180,7 +181,15 @@ const Navigation: FC = ({}) => {
               }}
             >
               {currentLanguage}
-              <img data-aos="flip-left" className="v-icon" src="/v-icon.svg" />
+              <Image
+                data-aos="flip-left"
+                className="v-icon"
+                src="/v-icon.svg"
+                alt=""
+                width="0"
+                height="0"
+                priority
+              />
             </div>
             <div
               className="language-options-area"
@@ -192,10 +201,14 @@ const Navigation: FC = ({}) => {
             >
               <div>
                 {currentLanguage}
-                <img
+                <Image
                   data-aos="flip-left"
                   className="v-icon"
                   src="/v-icon.svg"
+                  alt=""
+                  width="0"
+                  height="0"
+                  priority
                 />
               </div>
               <div className="language-options">
@@ -235,7 +248,15 @@ const Navigation: FC = ({}) => {
               }}
             >
               {currentLanguage}
-              <img data-aos="flip-left" className="v-icon" src="/v-icon.svg" />
+              <Image
+                data-aos="flip-left"
+                className="v-icon"
+                src="/v-icon.svg"
+                alt=""
+                width="0"
+                height="0"
+                priority
+              />
             </div>
             <div
               className="language-options-area"
@@ -247,10 +268,14 @@ const Navigation: FC = ({}) => {
             >
               <div>
                 {currentLanguage}
-                <img
+                <Image
                   data-aos="flip-left"
                   className="v-icon"
                   src="/v-icon.svg"
+                  alt=""
+                  width="0"
+                  height="0"
+                  priority
                 />
               </div>
               <div className="language-options">

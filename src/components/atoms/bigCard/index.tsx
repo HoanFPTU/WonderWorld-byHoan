@@ -1,5 +1,6 @@
 import React, { FC } from "react";
 import "./index.scss";
+import Image from "next/image";
 interface indexProps {
   style: React.CSSProperties;
 }
@@ -7,7 +8,14 @@ interface indexProps {
 const BigCard: FC<indexProps> = ({ style }) => {
   return (
     <div className="bigCard">
-      <img data-aos="flip-left" src="/sanho.svg" alt="" />
+      <Image
+        data-aos="flip-left"
+        src="/sanho.svg"
+        alt=""
+        width="0"
+        height="0"
+        priority
+      />
     </div>
   );
 };

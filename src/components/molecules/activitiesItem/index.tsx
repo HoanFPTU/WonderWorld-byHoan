@@ -1,4 +1,3 @@
-import Image from "@/components/atoms/activities/image";
 import React, { FC } from "react";
 import "./index.scss";
 import Title from "@/components/atoms/activities/title";

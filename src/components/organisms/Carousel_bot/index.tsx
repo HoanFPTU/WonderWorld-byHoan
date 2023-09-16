@@ -6,6 +6,7 @@ import Link from "next/link";
 import { useTranslation } from "@/components/hooks/useTranslation";
 import { PageContext } from "@/components/useContext/setPage";
 import { useRouter } from "next/router";
+import Image from "next/image";
 
 interface CarouselBotProps {
   sliderRef: any;

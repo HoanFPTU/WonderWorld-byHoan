@@ -3,6 +3,7 @@ import React, { FC, useEffect, useState } from "react";
 import "./index.scss";
 import Message from "../message";
 import { useTranslation } from "@/components/hooks/useTranslation";
+import Image from "next/image";
 
 interface indexProps {
   style?: "small" | "large";
@@ -49,7 +50,14 @@ const ServiceCard: FC<indexProps> = ({
         />
         <div className="favorite">
           <div className="Ellipse">
-            <img data-aos="flip-left" src="/Ellipse.svg" alt="" />
+            <Image
+              data-aos="flip-left"
+              src="/Ellipse.svg"
+              alt=""
+              width="0"
+              height="0"
+              priority
+            />
           </div>
           <div className="heart">
             <img
@@ -80,7 +88,14 @@ const ServiceCard: FC<indexProps> = ({
 
       <div className="card-foot">
         <div className="time">
-          <img data-aos="flip-left" src="/dongho.svg" alt="" />
+          <Image
+            data-aos="flip-left"
+            src="/dongho.svg"
+            alt=""
+            width="0"
+            height="0"
+            priority
+          />
           <h3>{t!["serviceItemTime"]}</h3>
         </div>
         <div className="msg">

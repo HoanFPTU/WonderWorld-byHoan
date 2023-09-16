@@ -5,6 +5,7 @@ import EventDetail from "@/components/atoms/enentDetail";
 import OrderCard from "@/components/atoms/orderCard";
 import Link from "next/link";
 import { useTranslation } from "@/components/hooks/useTranslation";
+import Image from "next/image";
 interface indexProps {}
 
 const ContentServiceLeft: FC<indexProps> = () => {
@@ -18,7 +19,14 @@ const ContentServiceLeft: FC<indexProps> = () => {
         <EventDetail content={t!["projectItemLeftDetail"]} />
         <div className="icon">
           <Link href="#">{t!["projectItemUpdating"]}</Link>
-          <img data-aos="flip-left" src="/arrow_downward_24px.svg" alt="" />
+          <Image
+            data-aos="flip-left"
+            src="/arrow_downward_24px.svg"
+            alt=""
+            width="0"
+            height="0"
+            priority
+          />
         </div>
       </div>
     </div>

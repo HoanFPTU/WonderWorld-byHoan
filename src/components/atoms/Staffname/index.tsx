@@ -1,6 +1,8 @@
 import Link from "next/link";
 import React, { FC } from "react";
 import "./index.scss";
+import Image from "next/image";
+
 interface StaffnameProps {
   fullname: string;
   rule: string;
@@ -14,8 +16,8 @@ const Staffname: FC<StaffnameProps> = ({ rule, level, fullname }) => {
         <h3 className="nameStaff"> {fullname}</h3>
         <p className="ruleStaff">{rule}</p>
         <div className="levelStaff">
-          <img data-aos="flip-left" src="/level.svg" alt="" />
-          <img data-aos="flip-left" src="/level.svg" alt="" />
+          <Image src="/level.svg" alt="" width="0" height="0" priority />
+          <Image src="/level.svg" alt="" width="0" height="0" priority />
         </div>
       </div>
     );
@@ -24,10 +26,10 @@ const Staffname: FC<StaffnameProps> = ({ rule, level, fullname }) => {
       <h3 className="nameStaff"> {fullname}</h3>
       <p className="ruleStaff">{rule}</p>
       <div className="levelStaff">
-        <img data-aos="flip-left" src="/level.svg" alt="" />
-        <img data-aos="flip-left" src="/level.svg" alt="" />
-        <img data-aos="flip-left" src="/level.svg" alt="" />
-        <img data-aos="flip-left" src="/level.svg" alt="" />
+        <Image src="/level.svg" alt="" width="0" height="0" priority />
+        <Image src="/level.svg" alt="" width="0" height="0" priority />
+        <Image src="/level.svg" alt="" width="0" height="0" priority />
+        <Image src="/level.svg" alt="" width="0" height="0" priority />
       </div>
     </div>
   );
