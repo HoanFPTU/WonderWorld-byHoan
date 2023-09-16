@@ -21,7 +21,7 @@ const Project: FC = () => {
   }, []);
   return (
     <>
-      <motion.div
+      {/* <motion.div
         key={router.pathname}
         initial={{ x: "-100%" }}
         animate={{ x: 0 }}
@@ -30,16 +30,15 @@ const Project: FC = () => {
           duration: 0.6,
           ease: "easeInOut",
         }}
-      >
-        {" "}
-        <PageTemplate background="/bg1.jpeg">
-          <Carousel>Dự Án Bảo Tồn Bãi Biển</Carousel>
-          <div className="cover-project">
-            <ServiceLeft />
-            <ServiceRight />
-          </div>
-        </PageTemplate>
-      </motion.div>
+      > */}{" "}
+      <PageTemplate background="/bg1.jpeg">
+        <Carousel>Dự Án Bảo Tồn Bãi Biển</Carousel>
+        <div className="cover-project">
+          <ServiceLeft />
+          <ServiceRight />
+        </div>
+      </PageTemplate>
+      {/* </motion.div> */}
     </>
   );
 };

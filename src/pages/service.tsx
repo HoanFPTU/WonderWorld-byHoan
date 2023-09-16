@@ -19,7 +19,7 @@ const service: FC<serviceProps> = ({}) => {
   const t = useTranslation();
   return (
     <>
-      <motion.div
+      {/* <motion.div
         key={router.pathname}
         initial={{ x: "-100%" }}
         animate={{ x: 0 }}
@@ -28,15 +28,14 @@ const service: FC<serviceProps> = ({}) => {
           duration: 0.6,
           ease: "easeInOut",
         }}
-      >
-        {" "}
-        <PageTemplate background="/dVuLan.png">
-          <Carousel>{t!["carouselStaffService"]}</Carousel>
-          <div>
-            <ListCardService />
-          </div>
-        </PageTemplate>
-      </motion.div>
+      > */}{" "}
+      <PageTemplate background="/dVuLan.png">
+        <Carousel>{t!["carouselStaffService"]}</Carousel>
+        <div>
+          <ListCardService />
+        </div>
+      </PageTemplate>
+      {/* </motion.div> */}
     </>
   );
 };

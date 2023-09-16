@@ -44,7 +44,7 @@ const Listcard: FC<ListcardProps> = ({ sliderRef }) => {
       <div className="widthSlider">
         <Slider ref={sliderRef} {...settings}>
           {arrayListCard.map((card, index) => {
-            if (numberPage && index >= numberPage - 1 && index < numberPage + 2)
+            if (numberPage && index >= numberPage - 1 && index < numberPage + 3)
               return (
                 <Card src={card.src} href={card.href}>
                   {" "}

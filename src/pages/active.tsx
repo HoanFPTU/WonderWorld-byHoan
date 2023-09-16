@@ -20,7 +20,7 @@ const ActivePage: FC = ({}) => {
 
   return (
     <>
-      <motion.div
+      {/* <motion.div
         key={router.pathname}
         initial={{ x: "-100%" }}
         animate={{ x: 0 }}
@@ -29,15 +29,15 @@ const ActivePage: FC = ({}) => {
           duration: 0.6,
           ease: "easeInOut",
         }}
-      >
-        <PageTemplate background="/backgroundTemplate/active.svg">
-          {/* background="/bg1.svg" */}
-          <Carousel> {t!["carouselCardActivities"]}</Carousel>
-          <div>
-            <ActivitiesArea></ActivitiesArea>
-          </div>
-        </PageTemplate>
-      </motion.div>
+      > */}
+      <PageTemplate background="/backgroundTemplate/active.svg">
+        {/* background="/bg1.svg" */}
+        <Carousel> {t!["carouselCardActivities"]}</Carousel>
+        <div>
+          <ActivitiesArea></ActivitiesArea>
+        </div>
+      </PageTemplate>
+      {/* </motion.div> */}
     </>
   );
 };

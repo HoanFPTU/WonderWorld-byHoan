@@ -16,7 +16,12 @@ const Buttonactive: FC<ButtonactiveProps> = ({
       <div className="button-active">
         <p className="button-active__title">{children}</p>
         <Button style="activepage">
-          <img priority={true} src="/activeButton.svg" alt="" />
+          <img
+            data-aos="flip-left"
+            priority={true}
+            src="/activeButton.svg"
+            alt=""
+          />
           <div className="button-active__msg">
             <p onClick={() => OnClickpage1()}>Chương trình trồng san hô</p>
             <p onClick={() => OnClickpage2()}>Khoa học về san hô</p>

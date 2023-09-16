@@ -21,6 +21,9 @@ const PageTemplate: FC<PageTemplateProps> = ({ children, background }) => {
       style={{
         backgroundImage: `url('${background}')`,
       }}
+      data-aos="zoom-out"
+      data-aos-duration="1000"
+      data-aos-easing="ease-in-sine"
     >
       <Header />
       {children}

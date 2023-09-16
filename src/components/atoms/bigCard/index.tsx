@@ -7,7 +7,7 @@ interface indexProps {
 const BigCard: FC<indexProps> = ({ style }) => {
   return (
     <div className="bigCard">
-      <img priority={true} src="/sanho.svg" alt="" />
+      <img data-aos="flip-left" priority={true} src="/sanho.svg" alt="" />
     </div>
   );
 };

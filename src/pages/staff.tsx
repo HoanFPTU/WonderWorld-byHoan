@@ -17,16 +17,7 @@ const staff = () => {
     setNumberPage(2);
   }, []);
   return (
-    <motion.div
-      key={router.pathname}
-      initial={{ x: "-100%" }}
-      animate={{ x: 0 }}
-      exit={{ x: "100%" }}
-      transition={{
-        duration: 0.6,
-        ease: "easeInOut",
-      }}
-    >
+    <>
       <PageTemplate background="/bg2-2.svg">
         <Carousel>{t!["carouselStaffPage"]}</Carousel>
         <div className="block">
@@ -36,7 +27,7 @@ const staff = () => {
           <Inforstaff></Inforstaff>
         </div>
       </PageTemplate>
-    </motion.div>
+    </>
   );
 };
 export default staff;
