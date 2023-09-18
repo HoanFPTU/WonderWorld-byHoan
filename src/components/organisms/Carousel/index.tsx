@@ -1,4 +1,3 @@
-"use client";
 import React, { FC, useContext, useRef, useState } from "react";
 import "./index.scss";
 import CarouselBot from "../Carousel_bot";

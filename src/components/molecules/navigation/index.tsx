@@ -1,4 +1,3 @@
-"use client";
 import Link from "next/link";
 import React, { FC, useEffect, useState } from "react";
 import "./index.scss";

@@ -1,4 +1,3 @@
-"use client";
 import React, { FC, useEffect } from "react";
 import "./index.scss";
 import Header from "@/components/organisms/header";

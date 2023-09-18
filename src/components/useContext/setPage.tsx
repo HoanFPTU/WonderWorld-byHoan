@@ -1,4 +1,3 @@
-"use client";
 import React, { FC, useContext, useRef, useState } from "react";
 interface TypePage {
   numberPage: number | null;

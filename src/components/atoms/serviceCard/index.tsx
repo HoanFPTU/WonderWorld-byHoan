@@ -1,4 +1,3 @@
-"use client";
 import React, { FC, useEffect, useState } from "react";
 import "./index.scss";
 import Message from "../message";
